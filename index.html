@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fortitude Fabrics — Antistatic Textile Manufacturer</title>
+  <title>Fortitude Fabrics — Technical Textile Manufacturer</title>
   <meta name="description"
     content="Fortitude Fabrics is a specialized manufacturer of high-quality antistatic protective garments, coveralls, head caps, and shoe covers in Telangana.">
   <meta property="og:title" content="Fortitude Fabrics — Antistatic Protective Wear">
@@ -168,7 +168,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 40px;
+      gap: 24px;
       list-style: none
     }
 
@@ -221,6 +221,45 @@
 
     .nav-enquire::after {
       display: none !important
+    }
+
+    .nav-cart {
+      background: transparent;
+      color: var(--blue) !important;
+      padding: 11px 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: 1px solid var(--blue);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .nav-cart:hover {
+      background: var(--blue);
+      color: #fff !important
+    }
+
+    .nav-cart::after {
+      display: none !important
+    }
+
+    .cart-pill {
+      min-width: 22px;
+      height: 22px;
+      padding: 0 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--dark);
+      font-size: 11px;
+      letter-spacing: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center
     }
 
     .menu-btn {
@@ -906,6 +945,187 @@
       display: block
     }
 
+    /* ── INDUSTRIAL UNIFORMS ── */
+    .uniforms-section {
+      padding: 120px 80px;
+      background: linear-gradient(180deg, #fff 0%, #f8f6f0 100%)
+    }
+
+    .uniforms-inner {
+      max-width: 1400px;
+      margin: 0 auto
+    }
+
+    .uniforms-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 48px
+    }
+
+    .uniforms-sub {
+      max-width: 520px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.8
+    }
+
+    .uniforms-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px
+    }
+
+    .uniform-card {
+      border: 1px solid var(--border);
+      background: #fff;
+      overflow: hidden
+    }
+
+    .uniform-img-wrap {
+      aspect-ratio: 1.1;
+      background: #f0ede6;
+      overflow: hidden
+    }
+
+    .uniform-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(.25, .46, .45, .94)
+    }
+
+    .uniform-card:hover .uniform-img-wrap img {
+      transform: scale(1.06)
+    }
+
+    .uniform-body {
+      padding: 24px
+    }
+
+    .uniform-type {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 10px
+    }
+
+    .uniform-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      line-height: 1.2;
+      color: var(--dark)
+    }
+
+    .uniform-desc {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7
+    }
+
+    .uniform-meta {
+      margin-top: 16px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .uniform-meta span {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      padding: 5px 10px
+    }
+
+    .uniform-cart-btn {
+      margin-top: 18px;
+      width: 100%;
+      border: none;
+      background: var(--blue);
+      color: #fff;
+      padding: 13px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.25s
+    }
+
+    .uniform-cart-btn:hover {
+      background: var(--blue-light)
+    }
+
+    .uniform-cart-panel {
+      margin-top: 28px;
+      border: 1px solid var(--border);
+      background: #fff;
+      padding: 24px
+    }
+
+    .uniform-cart-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px
+    }
+
+    .uniform-cart-head h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--dark)
+    }
+
+    .uniform-cart-head button {
+      border: 1px solid var(--border);
+      background: #f7f5ef;
+      color: var(--text);
+      padding: 8px 14px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer
+    }
+
+    .uniform-cart-list {
+      list-style: none;
+      margin-top: 14px
+    }
+
+    .uniform-cart-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+      gap: 12px
+    }
+
+    .uniform-cart-list .qty {
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    .uniform-cart-list .remove {
+      border: none;
+      background: none;
+      color: #9d2f2f;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600
+    }
+
+    .uniform-cart-empty {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px
+    }
+
     /* ── CAPABILITIES ── */
     .capabilities {
       padding: 120px 80px;
@@ -1423,6 +1643,10 @@
       display: none !important
     }
 
+    .admin-route-hidden {
+      display: none !important
+    }
+
     .admin-block-title {
       font-family: 'Playfair Display', serif;
       font-size: 30px;
@@ -1890,6 +2114,7 @@
       }
 
       .products-section,
+      .uniforms-section,
       .capabilities,
       .process,
       .enquiry,
@@ -1910,6 +2135,10 @@
       }
 
       .products-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .uniforms-grid {
         grid-template-columns: 1fr 1fr
       }
 
@@ -2021,6 +2250,10 @@
         transition-delay: 0.35s
       }
 
+      .nav-links.open li:nth-child(7) {
+        transition-delay: 0.4s
+      }
+
       .nav-links a {
         display: block;
         padding: 20px;
@@ -2036,6 +2269,11 @@
         margin: 10px 20px 20px;
       }
 
+      .nav-cart {
+        margin: 20px 20px 10px;
+        justify-content: center
+      }
+
       .hero-inner {
         padding: 100px 24px 60px
       }
@@ -2043,6 +2281,7 @@
       .about,
       .why,
       .products-section,
+      .uniforms-section,
       .capabilities,
       .process,
       .enquiry,
@@ -2060,6 +2299,15 @@
 
       .products-grid {
         grid-template-columns: 1fr
+      }
+
+      .uniforms-grid {
+        grid-template-columns: 1fr
+      }
+
+      .uniforms-head {
+        flex-direction: column;
+        align-items: flex-start
       }
 
       .product-group {
@@ -2137,15 +2385,17 @@
       </div>
       <div class="logo-text">
         Fortitude Fabrics
-        <span>Antistatic Textile Manufacturer</span>
+        <span>Technical Textile Manufacturer</span>
       </div>
     </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#products">Products</a></li>
+      <li><a href="#uniforms">Uniforms</a></li>
       <li><a href="#capabilities">Capabilities</a></li>
       <li><a href="#why">Why Us</a></li>
-      <li><a href="#admin">Admin</a></li>
+      <li><a href="#uniforms" class="nav-cart" id="headerCartBtn">Add to Cart <span class="cart-pill"
+            id="headerCartCount">0</span></a></li>
       <li><a href="#enquiry" class="nav-enquire">Enquire Now</a></li>
     </ul>
     <button class="menu-btn" aria-label="Toggle Menu">
@@ -2326,6 +2576,107 @@
       </div>
 
       <div class="product-groups" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIAL UNIFORMS -->
+  <section class="uniforms-section" id="uniforms">
+    <div class="uniforms-inner">
+      <div class="uniforms-head">
+        <div>
+          <div class="section-eyebrow reveal"><span>Industrial Uniforms</span></div>
+          <h2 class="section-title reveal d1">Built for Daily<br><em>Industrial Operations</em></h2>
+        </div>
+        <p class="uniforms-sub reveal d2">Add uniforms to cart for quote preparation. Suitable for manufacturing plants,
+          warehouse teams, utilities, maintenance crews, and field operations.</p>
+      </div>
+
+      <div class="uniforms-grid">
+        <article class="uniform-card reveal">
+          <div class="uniform-img-wrap">
+            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=900&q=80"
+              alt="Industrial Utility Coverall" loading="lazy">
+          </div>
+          <div class="uniform-body">
+            <div class="uniform-type">Industrial Uniform</div>
+            <h3 class="uniform-name">Utility Coverall Set</h3>
+            <p class="uniform-desc">Durable coverall engineered for production floors, mechanical operations, and heavy
+              movement shifts.</p>
+            <div class="uniform-meta">
+              <span>Cotton Blend</span>
+              <span>MOQ 100</span>
+              <span>Custom Size</span>
+            </div>
+            <button class="uniform-cart-btn" data-uniform-item="Utility Coverall Set">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="uniform-card reveal d1">
+          <div class="uniform-img-wrap">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80"
+              alt="Supervisor Two Piece Uniform" loading="lazy">
+          </div>
+          <div class="uniform-body">
+            <div class="uniform-type">Industrial Uniform</div>
+            <h3 class="uniform-name">Supervisor 2-Piece Uniform</h3>
+            <p class="uniform-desc">Structured shirt and trouser set designed for line supervisors and floor management
+              teams.</p>
+            <div class="uniform-meta">
+              <span>Breathable</span>
+              <span>MOQ 80</span>
+              <span>Logo Ready</span>
+            </div>
+            <button class="uniform-cart-btn" data-uniform-item="Supervisor 2-Piece Uniform">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="uniform-card reveal d2">
+          <div class="uniform-img-wrap">
+            <img src="https://images.unsplash.com/photo-1579033461380-adb47c3eb938?auto=format&fit=crop&w=900&q=80"
+              alt="Field Service Jacket Uniform" loading="lazy">
+          </div>
+          <div class="uniform-body">
+            <div class="uniform-type">Industrial Uniform</div>
+            <h3 class="uniform-name">Field Service Jacket Uniform</h3>
+            <p class="uniform-desc">Outdoor-ready jacket uniform for service engineers, maintenance visits, and utility
+              field teams.</p>
+            <div class="uniform-meta">
+              <span>Weather Ready</span>
+              <span>MOQ 60</span>
+              <span>Reflective</span>
+            </div>
+            <button class="uniform-cart-btn" data-uniform-item="Field Service Jacket Uniform">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="uniform-card reveal d3">
+          <div class="uniform-img-wrap">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80"
+              alt="Operator Workwear Shirt and Trouser" loading="lazy">
+          </div>
+          <div class="uniform-body">
+            <div class="uniform-type">Industrial Uniform</div>
+            <h3 class="uniform-name">Operator Workwear Combo</h3>
+            <p class="uniform-desc">Practical shirt-trouser combo for operators with reinforced seams for high-frequency
+              movement and long shifts.</p>
+            <div class="uniform-meta">
+              <span>Reinforced Seams</span>
+              <span>MOQ 120</span>
+              <span>Fast Turnaround</span>
+            </div>
+            <button class="uniform-cart-btn" data-uniform-item="Operator Workwear Combo">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="uniform-cart-panel reveal d2">
+        <div class="uniform-cart-head">
+          <h3>Uniform Cart</h3>
+          <button type="button" id="clearUniformCart">Clear Cart</button>
+        </div>
+        <ul class="uniform-cart-list" id="uniformCartList"></ul>
+        <p class="uniform-cart-empty" id="uniformCartEmpty">No industrial uniforms in cart yet.</p>
+      </div>
     </div>
   </section>
 
@@ -2844,7 +3195,7 @@
   <footer>
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="logo-text">Fortitude Fabrics<span>Antistatic Textile Manufacturer</span></div>
+        <div class="logo-text">Fortitude Fabrics<span>Technical Textile Manufacturer</span></div>
         <p>Specialized manufacturer of antistatic protective garments — coveralls, head caps, and shoe covers — for
           ESD-sensitive industries across India.</p>
       </div>
@@ -2925,6 +3276,8 @@
 
     const STORAGE_KEY = 'fortitude_admin_dashboard_v1'
     const SESSION_KEY = 'fortitude_admin_session_v1'
+    const UNIFORM_CART_KEY = 'fortitude_uniform_cart_v1'
+    const WHATSAPP_ORDER_NUMBER = '919490255858'
 
     const CATEGORY_LABELS = {
       coverall: 'Coverall',
@@ -3073,6 +3426,12 @@
 
     let appData = loadAppData()
     let currentProductFilter = 'all'
+    let uniformCart = loadUniformCart()
+    const adminRouteSegments = window.location.pathname
+      .split('/')
+      .filter(Boolean)
+      .map(segment => segment.toLowerCase())
+    const isAdminRoute = adminRouteSegments[adminRouteSegments.length - 1] === 'admin'
 
     function cloneDeep(value) {
       return JSON.parse(JSON.stringify(value))
@@ -3183,6 +3542,124 @@
 
     function saveAppData() {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(appData))
+    }
+
+    function loadUniformCart() {
+      try {
+        const raw = localStorage.getItem(UNIFORM_CART_KEY)
+        if (!raw) return {}
+        const parsed = JSON.parse(raw)
+        if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {}
+        const sanitized = {}
+        Object.entries(parsed).forEach(([name, qty]) => {
+          const safeName = asText(name, '')
+          const safeQty = Math.max(0, Number(qty) || 0)
+          if (safeName && safeQty > 0) sanitized[safeName] = safeQty
+        })
+        return sanitized
+      } catch {
+        return {}
+      }
+    }
+
+    function saveUniformCart() {
+      localStorage.setItem(UNIFORM_CART_KEY, JSON.stringify(uniformCart))
+    }
+
+    function getUniformCartCount() {
+      return Object.values(uniformCart).reduce((sum, qty) => sum + (Number(qty) || 0), 0)
+    }
+
+    function updateHeaderCartCount() {
+      const cartCountEl = document.getElementById('headerCartCount')
+      if (cartCountEl) cartCountEl.textContent = String(getUniformCartCount())
+    }
+
+    function renderUniformCart() {
+      const list = document.getElementById('uniformCartList')
+      const empty = document.getElementById('uniformCartEmpty')
+      if (!list || !empty) {
+        updateHeaderCartCount()
+        return
+      }
+
+      const entries = Object.entries(uniformCart).filter(([, qty]) => Number(qty) > 0)
+      if (!entries.length) {
+        list.innerHTML = ''
+        empty.style.display = 'block'
+        updateHeaderCartCount()
+        return
+      }
+
+      empty.style.display = 'none'
+      list.innerHTML = entries.map(([name, qty]) => `
+        <li>
+          <span>${escapeHtml(name)}</span>
+          <span class="qty">Qty ${escapeHtml(String(qty))}</span>
+          <button type="button" class="remove" data-remove-uniform="${escapeAttr(name)}">Remove</button>
+        </li>
+      `).join('')
+
+      updateHeaderCartCount()
+    }
+
+    function addUniformToCart(name, openWhatsApp = false) {
+      const safeName = asText(name, '')
+      if (!safeName) return
+      uniformCart[safeName] = (Number(uniformCart[safeName]) || 0) + 1
+      saveUniformCart()
+      renderUniformCart()
+      if (openWhatsApp) openUniformOrderOnWhatsApp(safeName)
+    }
+
+    function removeUniformFromCart(name) {
+      const safeName = asText(name, '')
+      if (!safeName || !uniformCart[safeName]) return
+      delete uniformCart[safeName]
+      saveUniformCart()
+      renderUniformCart()
+    }
+
+    function clearUniformCart() {
+      uniformCart = {}
+      saveUniformCart()
+      renderUniformCart()
+    }
+
+    function buildUniformOrderMessage(latestItem = '') {
+      const entries = Object.entries(uniformCart).filter(([, qty]) => Number(qty) > 0)
+      const lines = [
+        'Hello Fortitude Fabrics,',
+        '',
+        'I want to place an industrial uniforms order.',
+        latestItem ? `Latest item added: ${latestItem}` : ''
+      ]
+
+      if (entries.length) {
+        lines.push('', 'Order items:')
+        entries.forEach(([name, qty], index) => {
+          lines.push(`${index + 1}. ${name} - Qty ${qty}`)
+        })
+      } else if (latestItem) {
+        lines.push('', 'Order items:', `1. ${latestItem} - Qty 1`)
+      }
+
+      lines.push('', 'Please share quotation, MOQ, and delivery timeline.')
+      return lines.filter(Boolean).join('\n')
+    }
+
+    function openUniformOrderOnWhatsApp(latestItem = '') {
+      const cartCount = getUniformCartCount()
+      if (!latestItem && cartCount < 1) {
+        alert('Your cart is empty. Add at least one uniform to place order on WhatsApp.')
+        const uniformsSection = document.getElementById('uniforms')
+        if (uniformsSection) uniformsSection.scrollIntoView({ behavior: 'smooth' })
+        return
+      }
+
+      const message = buildUniformOrderMessage(latestItem)
+      const url = `https://wa.me/${WHATSAPP_ORDER_NUMBER}?text=${encodeURIComponent(message)}`
+      window.open(url, '_blank')
     }
 
     function categoryLabel(category) {
@@ -3435,6 +3912,15 @@
       renderEnquiryOptions(selectedEnquiryValue)
       renderPublicProducts()
       renderAdminPanel()
+    }
+
+    function setAdminRouteVisibility() {
+      const adminSection = document.getElementById('admin')
+      if (!adminSection) return
+      adminSection.classList.toggle('admin-route-hidden', !isAdminRoute)
+      if (isAdminRoute) {
+        window.requestAnimationFrame(() => adminSection.scrollIntoView({ behavior: 'auto' }))
+      }
     }
 
     function setAdminView() {
@@ -3902,6 +4388,7 @@
     // Smooth scroll links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', event => {
+        if (anchor.id === 'headerCartBtn') return
         const targetSelector = anchor.getAttribute('href')
         if (!targetSelector || targetSelector === '#') return
         let target = null
@@ -3917,8 +4404,34 @@
       })
     })
 
-    // Dynamic product enquiry prefill delegation
+    const headerCartBtn = document.getElementById('headerCartBtn')
+    if (headerCartBtn) {
+      headerCartBtn.addEventListener('click', event => {
+        event.preventDefault()
+        openUniformOrderOnWhatsApp()
+      })
+    }
+
+    // Product enquiry + uniform cart delegation
     document.addEventListener('click', event => {
+      const uniformAddBtn = event.target.closest('.uniform-cart-btn[data-uniform-item]')
+      if (uniformAddBtn) {
+        addUniformToCart(uniformAddBtn.dataset.uniformItem || '', true)
+        return
+      }
+
+      const uniformRemoveBtn = event.target.closest('button[data-remove-uniform]')
+      if (uniformRemoveBtn) {
+        removeUniformFromCart(uniformRemoveBtn.dataset.removeUniform || '')
+        return
+      }
+
+      const clearUniformBtn = event.target.closest('#clearUniformCart')
+      if (clearUniformBtn) {
+        clearUniformCart()
+        return
+      }
+
       const trigger = event.target.closest('.product-enquire[data-prefill]')
       if (!trigger) return
       const productLabel = trigger.dataset.prefill || ''
@@ -3927,8 +4440,10 @@
 
     // Initialize
     bindAdminEvents()
-    setAdminView()
     syncViews()
+    renderUniformCart()
+    setAdminRouteVisibility()
+    setAdminView()
 
     // Expose functions used by inline handlers
     window.filterProducts = filterProducts
