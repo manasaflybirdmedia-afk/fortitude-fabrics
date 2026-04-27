@@ -1,0 +1,3940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortitude Fabrics — Antistatic Textile Manufacturer</title>
+  <meta name="description"
+    content="Fortitude Fabrics is a specialized manufacturer of high-quality antistatic protective garments, coveralls, head caps, and shoe covers in Telangana.">
+  <meta property="og:title" content="Fortitude Fabrics — Antistatic Protective Wear">
+  <meta property="og:description"
+    content="Manufacturer of high-quality antistatic coveralls, head caps, and shoe covers engineered for cleanrooms and ESD-sensitive environments.">
+  <meta property="og:type" content="website">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    :root {
+      --bg: #f8f6f0;
+      --dark: #1a1a1a;
+      --mid: #2e2e2e;
+      --blue: #1e3a5f;
+      --blue-light: #2a4f82;
+      --accent: #c8a96e;
+      --accent2: #e8d5a3;
+      --text: #3a3a3a;
+      --muted: #888;
+      --white: #fff;
+      --border: #e0dbd0;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden
+    }
+
+    /* ── LOADER ── */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: var(--dark);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      transition: opacity 0.6s, visibility 0.6s
+    }
+
+    #loader.hidden {
+      opacity: 0;
+      visibility: hidden
+    }
+
+    .loader-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: var(--accent);
+      letter-spacing: 0.1em
+    }
+
+    .loader-bar {
+      width: 200px;
+      height: 1px;
+      background: rgba(200, 169, 110, 0.2);
+      position: relative;
+      overflow: hidden
+    }
+
+    .loader-bar::after {
+      content: '';
+      position: absolute;
+      left: -100%;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: var(--accent);
+      animation: load 1.5s ease forwards
+    }
+
+    @keyframes load {
+      to {
+        left: 0
+      }
+    }
+
+
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 500;
+      padding: 0 60px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.4s;
+      background: rgba(248, 246, 240, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    nav.scrolled {
+      background: rgba(248, 246, 240, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 30px rgba(0, 0, 0, 0.06)
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none
+    }
+
+    .logo-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .logo-icon img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #222;
+      margin-top: 2px
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--mid);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color 0.3s;
+      position: relative
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s
+    }
+
+    .nav-links a:hover {
+      color: var(--blue)
+    }
+
+    .nav-links a:hover::after {
+      width: 100%
+    }
+
+    .nav-enquire {
+      background: var(--blue);
+      color: #fff !important;
+      padding: 12px 28px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: none
+    }
+
+    .nav-enquire:hover {
+      background: var(--blue-light);
+      transform: translateY(-1px)
+    }
+
+    .nav-enquire::after {
+      display: none !important
+    }
+
+    .menu-btn {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--dark);
+      cursor: pointer;
+      padding: 8px
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--blue) 0%, #0f2240 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255, 255, 255, 0.4) 60px, rgba(255, 255, 255, 0.4) 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255, 255, 255, 0.4) 60px, rgba(255, 255, 255, 0.4) 61px)
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(200, 169, 110, 0.15) 0%, transparent 70%)
+    }
+
+    .hero-glow2 {
+      position: absolute;
+      bottom: -20%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(42, 79, 130, 0.4) 0%, transparent 70%)
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      padding: 140px 80px 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(200, 169, 110, 0.15);
+      border: 1px solid rgba(200, 169, 110, 0.3);
+      padding: 8px 20px;
+      margin-bottom: 32px
+    }
+
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.3)
+      }
+    }
+
+    .hero-badge span {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(48px, 5.5vw, 80px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 28px
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--accent)
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.8;
+      max-width: 460px;
+      margin-bottom: 48px;
+      font-weight: 300
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap
+    }
+
+    .btn-gold {
+      background: var(--accent);
+      color: var(--dark);
+      padding: 16px 40px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-block
+    }
+
+    .btn-gold:hover {
+      background: var(--accent2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(200, 169, 110, 0.3)
+    }
+
+    .btn-outline {
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      padding: 16px 40px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-block
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.05)
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 56px;
+      padding-top: 48px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1)
+    }
+
+    .hero-stat .n {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      color: var(--accent);
+      font-weight: 700;
+      line-height: 1
+    }
+
+    .hero-stat .l {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      margin-top: 6px
+    }
+
+    .hero-right {
+      position: relative;
+      isolation: isolate
+    }
+
+    .hero-product-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      position: relative;
+      z-index: 1
+    }
+
+    .showcase-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 24px;
+      backdrop-filter: blur(10px);
+      transition: all 0.4s;
+      cursor: default
+    }
+
+    .showcase-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(200, 169, 110, 0.4);
+      transform: translateY(-4px)
+    }
+
+    .showcase-card.big {
+      grid-column: span 2
+    }
+
+    .showcase-img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+      transition: transform 0.5s
+    }
+
+    .showcase-card:hover .showcase-img {
+      transform: scale(1.05)
+    }
+
+    .showcase-name {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 12px;
+      text-align: center
+    }
+
+    .showcase-type {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-align: center;
+      margin-top: 4px
+    }
+
+    .hero-tag {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      background: var(--accent);
+      padding: 16px 20px;
+      text-align: center;
+      z-index: 3;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22)
+    }
+
+    .hero-tag .n {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1
+    }
+
+    .hero-tag .l {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(30, 30, 30, 0.7);
+      margin-top: 4px
+    }
+
+    /* ── TICKER ── */
+    .ticker {
+      background: var(--dark);
+      padding: 16px 0;
+      overflow: hidden
+    }
+
+    .ticker-inner {
+      display: flex;
+      white-space: nowrap;
+      animation: tick 30s linear infinite
+    }
+
+    .ticker-inner span {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      padding: 0 40px
+    }
+
+    .ticker-inner span.dot {
+      color: var(--accent);
+      padding: 0 4px
+    }
+
+    @keyframes tick {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      padding: 120px 80px;
+      background: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto
+    }
+
+    .section-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      width: 36px;
+      height: 2px;
+      background: var(--accent)
+    }
+
+    .section-eyebrow span {
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 3.5vw, 54px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--dark);
+      margin-bottom: 24px
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--blue)
+    }
+
+    .body-text {
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 36px
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 0
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .highlight-item:first-child {
+      border-top: 1px solid var(--border)
+    }
+
+    .hi-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px
+    }
+
+    .hi-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 4px
+    }
+
+    .hi-text p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-weight: 300
+    }
+
+    .about-img-wrap {
+      position: relative
+    }
+
+    .about-img-main {
+      width: 100%;
+      height: 480px;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      background: #f0ede6;
+      padding: 40px
+    }
+
+    .about-img-badge {
+      position: absolute;
+      bottom: -30px;
+      left: -30px;
+      background: var(--blue);
+      padding: 32px;
+      max-width: 240px
+    }
+
+    .about-img-badge .n {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1
+    }
+
+    .about-img-badge .l {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 6px
+    }
+
+    .about-img-badge .sub {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-top: 8px;
+      line-height: 1.4;
+      font-weight: 300
+    }
+
+    /* ── PRODUCTS ── */
+    .products-section {
+      padding: 120px 80px;
+      background: var(--bg)
+    }
+
+    .products-section-inner {
+      max-width: 1400px;
+      margin: 0 auto
+    }
+
+    .products-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 64px
+    }
+
+    .products-tabs {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: 48px
+    }
+
+    .product-groups {
+      display: flex;
+      flex-direction: column;
+      gap: 52px
+    }
+
+    .product-group {
+      background: #f4f1e9;
+      border: 1px solid var(--border);
+      padding: 28px
+    }
+
+    .product-group.hidden {
+      display: none
+    }
+
+    .product-group-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .product-group-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 2.2vw, 34px);
+      color: var(--dark);
+      line-height: 1.1
+    }
+
+    .product-group-meta {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500
+    }
+
+    .tab {
+      padding: 12px 28px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      color: var(--muted);
+      border-right: 1px solid var(--border)
+    }
+
+    .tab:last-child {
+      border-right: none
+    }
+
+    .tab.active {
+      background: var(--blue);
+      color: #fff
+    }
+
+    .tab:hover:not(.active) {
+      background: rgba(30, 58, 95, 0.06)
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px
+    }
+
+    .product-card {
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+      group: true
+    }
+
+    .product-card:hover .product-img-wrap img {
+      transform: scale(1.05)
+    }
+
+    .product-img-wrap {
+      position: relative;
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: #f0ede6
+    }
+
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 32px;
+      transition: transform 0.6s cubic-bezier(.25, .46, .45, .94)
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 6px 14px;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700
+    }
+
+    .badge-woven {
+      background: var(--blue);
+      color: #fff
+    }
+
+    .badge-nonwoven {
+      background: var(--dark);
+      color: #fff
+    }
+
+    .product-body {
+      padding: 28px 28px 32px
+    }
+
+    .product-cat {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px
+    }
+
+    .product-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 12px
+    }
+
+    .product-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 24px
+    }
+
+    .product-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px
+    }
+
+    .spec-tag {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-weight: 500
+    }
+
+    .product-enquire {
+      display: block;
+      width: 100%;
+      background: var(--blue);
+      color: #fff;
+      text-align: center;
+      padding: 14px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer
+    }
+
+    .product-enquire:hover {
+      background: var(--blue-light)
+    }
+
+    .product-card-hidden {
+      display: none
+    }
+
+    .product-card-hidden.show {
+      display: block
+    }
+
+    /* ── CAPABILITIES ── */
+    .capabilities {
+      padding: 120px 80px;
+      background: var(--blue);
+      position: relative;
+      overflow: hidden
+    }
+
+    .capabilities::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(200, 169, 110, 0.1) 0%, transparent 70%)
+    }
+
+    .capabilities-inner {
+      max-width: 1400px;
+      margin: 0 auto
+    }
+
+    .cap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 2px;
+      margin-top: 64px
+    }
+
+    .cap-item {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 48px 36px;
+      transition: all 0.4s
+    }
+
+    .cap-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(200, 169, 110, 0.3);
+      transform: translateY(-6px)
+    }
+
+    .cap-icon {
+      font-size: 36px;
+      margin-bottom: 24px;
+      display: block
+    }
+
+    .cap-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.3em;
+      margin-bottom: 16px;
+      display: block
+    }
+
+    .cap-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.3
+    }
+
+    .cap-desc {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.8;
+      font-weight: 300
+    }
+
+    .capabilities .section-eyebrow::before {
+      background: rgba(200, 169, 110, 0.5)
+    }
+
+    .capabilities .section-eyebrow span {
+      color: var(--accent)
+    }
+
+    .capabilities .section-title {
+      color: #fff
+    }
+
+    .capabilities .section-title em {
+      color: var(--accent)
+    }
+
+    /* ── PROCESS ── */
+    .process {
+      padding: 120px 80px;
+      background: var(--bg)
+    }
+
+    .process-inner {
+      max-width: 1400px;
+      margin: 0 auto
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      margin-top: 64px;
+      position: relative
+    }
+
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--accent), transparent);
+      z-index: 0
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1
+    }
+
+    .step-num {
+      width: 72px;
+      height: 72px;
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--blue);
+      transition: all 0.4s;
+      position: relative
+    }
+
+    .process-step:hover .step-num {
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+      transform: scale(1.1)
+    }
+
+    .step-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+      letter-spacing: 0.02em
+    }
+
+    .step-desc {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-weight: 300
+    }
+
+    /* ── WHY ── */
+    .why {
+      padding: 120px 80px;
+      background: var(--white)
+    }
+
+    .why-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center
+    }
+
+    .why-img-stack {
+      position: relative;
+      height: 560px
+    }
+
+    .why-img-a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 75%;
+      height: 80%;
+      object-fit: cover
+    }
+
+    .why-img-b {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 55%;
+      height: 55%;
+      object-fit: contain;
+      background: var(--bg);
+      padding: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1)
+    }
+
+    .why-accent-box {
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      background: var(--accent);
+      padding: 24px 28px;
+      z-index: 2
+    }
+
+    .why-accent-box .n {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1
+    }
+
+    .why-accent-box .l {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(30, 30, 30, 0.7);
+      margin-top: 6px
+    }
+
+    .why-features {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-top: 48px
+    }
+
+    .why-feature {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
+      align-items: start;
+      padding: 28px;
+      border: 1px solid var(--border);
+      transition: all 0.3s
+    }
+
+    .why-feature:hover {
+      border-color: var(--accent);
+      transform: translateX(6px)
+    }
+
+    .wf-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 700;
+      padding-top: 2px
+    }
+
+    .wf-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px
+    }
+
+    .wf-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-weight: 300
+    }
+
+    /* ── ENQUIRY ── */
+    .enquiry {
+      padding: 120px 80px;
+      background: linear-gradient(135deg, var(--blue) 0%, #0f2240 100%);
+      position: relative;
+      overflow: hidden
+    }
+
+    .enquiry::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255, 255, 255, 0.02) 60px, rgba(255, 255, 255, 0.02) 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255, 255, 255, 0.02) 60px, rgba(255, 255, 255, 0.02) 61px)
+    }
+
+    .enquiry-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 100px;
+      align-items: start
+    }
+
+    .enquiry .section-eyebrow::before {
+      background: rgba(200, 169, 110, 0.5)
+    }
+
+    .enquiry .section-eyebrow span {
+      color: var(--accent)
+    }
+
+    .enquiry .section-title {
+      color: #fff
+    }
+
+    .enquiry .section-title em {
+      color: var(--accent)
+    }
+
+    .enquiry .body-text {
+      color: rgba(255, 255, 255, 0.5)
+    }
+
+    .contact-info-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-top: 48px
+    }
+
+    .cib {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start
+    }
+
+    .cib-icon {
+      width: 46px;
+      height: 46px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0
+    }
+
+    .cib-label {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+      display: block
+    }
+
+    .cib-value {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 300;
+      line-height: 1.6
+    }
+
+    .hours-table {
+      width: 100%;
+      margin-top: 8px
+    }
+
+    .hours-table tr td {
+      padding: 4px 0;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 300
+    }
+
+    .hours-table tr td:last-child {
+      text-align: right;
+      color: rgba(255, 255, 255, 0.4)
+    }
+
+    .enq-form {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 48px;
+      backdrop-filter: blur(10px)
+    }
+
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px
+    }
+
+    .form-sub {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 36px;
+      font-weight: 300
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px
+    }
+
+    .field {
+      margin-bottom: 20px
+    }
+
+    .field label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 10px;
+      font-weight: 500
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 14px 18px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.3s;
+      -webkit-appearance: none
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: rgba(255, 255, 255, 0.25)
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: rgba(200, 169, 110, 0.5)
+    }
+
+    .field select option {
+      background: var(--blue);
+      color: #fff
+    }
+
+    .field textarea {
+      resize: none;
+      min-height: 100px
+    }
+
+    .field-full {
+      grid-column: span 2
+    }
+
+    .submit-row {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-top: 8px
+    }
+
+    .btn-submit {
+      background: var(--accent);
+      color: var(--dark);
+      padding: 16px 44px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: 'Outfit', sans-serif
+    }
+
+    .btn-submit:hover {
+      background: var(--accent2);
+      transform: translateY(-2px)
+    }
+
+    .submit-note {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.3);
+      font-weight: 300
+    }
+
+    /* ── ADMIN ── */
+    .admin-section {
+      padding: 120px 80px;
+      background: linear-gradient(180deg, #eef2f8 0%, #f8f6f0 100%)
+    }
+
+    .admin-inner {
+      max-width: 1400px;
+      margin: 0 auto
+    }
+
+    .admin-shell {
+      margin-top: 40px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 36px
+    }
+
+    .admin-hidden {
+      display: none !important
+    }
+
+    .admin-block-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      color: var(--dark);
+      line-height: 1.1
+    }
+
+    .admin-note {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7
+    }
+
+    .admin-form-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px
+    }
+
+    .admin-form-grid.form-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
+
+    .admin-form-grid.form-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr))
+    }
+
+    .admin-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .admin-field-full {
+      grid-column: 1 / -1
+    }
+
+    .admin-field label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    .admin-field input,
+    .admin-field select,
+    .admin-field textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      padding: 12px 14px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.25s
+    }
+
+    .admin-field textarea {
+      resize: vertical;
+      min-height: 96px
+    }
+
+    .admin-field input:focus,
+    .admin-field select:focus,
+    .admin-field textarea:focus {
+      border-color: var(--blue)
+    }
+
+    .admin-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .admin-btn {
+      border: none;
+      cursor: pointer;
+      padding: 11px 18px;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: all 0.25s;
+      font-family: 'Outfit', sans-serif
+    }
+
+    .admin-btn-primary {
+      background: var(--blue);
+      color: #fff
+    }
+
+    .admin-btn-primary:hover {
+      background: var(--blue-light)
+    }
+
+    .admin-btn-gold {
+      background: var(--accent);
+      color: var(--dark)
+    }
+
+    .admin-btn-gold:hover {
+      background: var(--accent2)
+    }
+
+    .admin-btn-muted {
+      background: #ece8dd;
+      color: var(--mid)
+    }
+
+    .admin-btn-muted:hover {
+      background: #e0dacd
+    }
+
+    .admin-btn-danger {
+      background: #9d2f2f;
+      color: #fff
+    }
+
+    .admin-btn-danger:hover {
+      background: #7f2222
+    }
+
+    .admin-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .admin-stats {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px
+    }
+
+    .admin-stat {
+      border: 1px solid var(--border);
+      background: #fcfaf5;
+      padding: 20px
+    }
+
+    .admin-stat-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    .admin-stat-value {
+      margin-top: 8px;
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      color: var(--dark)
+    }
+
+    .admin-panels {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px
+    }
+
+    .admin-card {
+      border: 1px solid var(--border);
+      background: #fff;
+      padding: 20px
+    }
+
+    .admin-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: var(--dark)
+    }
+
+    .admin-card .admin-note {
+      margin-top: 6px
+    }
+
+    .admin-table-wrap {
+      margin-top: 18px;
+      overflow: auto;
+      border: 1px solid var(--border)
+    }
+
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 560px
+    }
+
+    .admin-table th,
+    .admin-table td {
+      border-bottom: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      font-size: 12px;
+      color: var(--text);
+      vertical-align: top
+    }
+
+    .admin-table th {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: #fbf8f1
+    }
+
+    .admin-table td .mini {
+      color: var(--muted);
+      font-size: 11px
+    }
+
+    .admin-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      padding: 4px 9px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700
+    }
+
+    .chip-woven {
+      background: #e7eef9;
+      color: var(--blue)
+    }
+
+    .chip-nonwoven {
+      background: #edecec;
+      color: #3f3f3f
+    }
+
+    .chip-active {
+      background: #e8f4eb;
+      color: #296735
+    }
+
+    .chip-inactive {
+      background: #f7ecec;
+      color: #8a3737
+    }
+
+    .chip-stock-ok {
+      background: #e8f4eb;
+      color: #296735
+    }
+
+    .chip-stock-low {
+      background: #f8ece3;
+      color: #8d4a1f
+    }
+
+    .admin-link-btn {
+      border: none;
+      background: none;
+      color: var(--blue);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 0 8px 0 0
+    }
+
+    .admin-link-btn.delete {
+      color: #9d2f2f
+    }
+
+    .admin-wide {
+      margin-top: 14px;
+      border: 1px solid var(--border);
+      background: #fff;
+      padding: 20px
+    }
+
+    .admin-wide h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: var(--dark)
+    }
+
+    .admin-wide-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 24px
+    }
+
+    .admin-alert {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      padding: 80px 80px 40px
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08)
+    }
+
+    .footer-brand .logo-text {
+      font-size: 24px;
+      color: #fff
+    }
+
+    .footer-brand .logo-text span {
+      color: rgba(255, 255, 255, 0.3)
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 1.8;
+      margin-top: 16px;
+      max-width: 280px;
+      font-weight: 300
+    }
+
+    .footer-col h4 {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+      font-weight: 600
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px
+    }
+
+    .footer-col ul li a {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+      text-decoration: none;
+      transition: color 0.3s;
+      font-weight: 300
+    }
+
+    .footer-col ul li a:hover {
+      color: rgba(255, 255, 255, 0.8)
+    }
+
+    .footer-col address {
+      font-style: normal;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 1.9;
+      font-weight: 300
+    }
+
+    .footer-col address a {
+      color: rgba(255, 255, 255, 0.4);
+      text-decoration: none;
+      transition: color 0.3s
+    }
+
+    .footer-col address a:hover {
+      color: var(--accent)
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 36px
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.25);
+      font-weight: 300
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 12px
+    }
+
+    .social-btn {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      text-decoration: none;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.4)
+    }
+
+    .social-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent)
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(.25, .46, .45, .94), transform 0.8s cubic-bezier(.25, .46, .45, .94)
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    .reveal.d1 {
+      transition-delay: 0.1s
+    }
+
+    .reveal.d2 {
+      transition-delay: 0.2s
+    }
+
+    .reveal.d3 {
+      transition-delay: 0.3s
+    }
+
+    .reveal.d4 {
+      transition-delay: 0.4s
+    }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px) {
+      nav {
+        padding: 0 32px
+      }
+
+      .hero-inner,
+      .about,
+      .why-inner {
+        grid-template-columns: 1fr;
+        gap: 60px
+      }
+
+      .hero-inner {
+        padding: 120px 40px 80px
+      }
+
+      .about,
+      .why {
+        padding: 80px 40px
+      }
+
+      .products-section,
+      .capabilities,
+      .process,
+      .enquiry,
+      .admin-section {
+        padding: 80px 40px
+      }
+
+      .cap-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr
+      }
+
+      .process-steps::before {
+        display: none
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .product-group {
+        padding: 24px
+      }
+
+      .admin-shell {
+        padding: 24px
+      }
+
+      .admin-stats {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .admin-panels {
+        grid-template-columns: 1fr
+      }
+
+      .admin-wide-grid {
+        grid-template-columns: 1fr
+      }
+
+      .enquiry-inner {
+        grid-template-columns: 1fr;
+        gap: 60px
+      }
+
+      footer {
+        padding: 60px 40px 32px
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px
+      }
+
+      .hero-product-showcase {
+        grid-template-columns: 1fr 1fr 1fr
+      }
+
+      .showcase-card.big {
+        grid-column: auto
+      }
+    }
+
+    @media(max-width:640px) {
+      nav {
+        padding: 0 20px
+      }
+
+      .menu-btn {
+        display: block
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.4s ease;
+        align-items: stretch;
+      }
+
+      .nav-links.open {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      .nav-links li {
+        border-bottom: 1px solid var(--border);
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s;
+      }
+
+      .nav-links.open li {
+        opacity: 1;
+        transform: none;
+      }
+
+      .nav-links.open li:nth-child(1) {
+        transition-delay: 0.1s
+      }
+
+      .nav-links.open li:nth-child(2) {
+        transition-delay: 0.15s
+      }
+
+      .nav-links.open li:nth-child(3) {
+        transition-delay: 0.2s
+      }
+
+      .nav-links.open li:nth-child(4) {
+        transition-delay: 0.25s
+      }
+
+      .nav-links.open li:nth-child(5) {
+        transition-delay: 0.3s
+      }
+
+      .nav-links.open li:nth-child(6) {
+        transition-delay: 0.35s
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 20px;
+        text-align: center;
+        font-size: 16px;
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      .nav-enquire {
+        margin: 10px 20px 20px;
+      }
+
+      .hero-inner {
+        padding: 100px 24px 60px
+      }
+
+      .about,
+      .why,
+      .products-section,
+      .capabilities,
+      .process,
+      .enquiry,
+      .admin-section {
+        padding: 60px 24px
+      }
+
+      footer {
+        padding: 48px 24px 24px
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr
+      }
+
+      .product-group {
+        padding: 18px
+      }
+
+      .product-group-head {
+        flex-direction: column;
+        align-items: flex-start
+      }
+
+      .admin-shell {
+        padding: 18px
+      }
+
+      .admin-form-grid,
+      .admin-form-grid.form-3,
+      .admin-form-grid.form-4 {
+        grid-template-columns: 1fr
+      }
+
+      .admin-stats {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .admin-topbar {
+        flex-direction: column;
+        align-items: flex-start
+      }
+
+      .admin-actions {
+        width: 100%
+      }
+
+      .cap-grid {
+        grid-template-columns: 1fr
+      }
+
+      .form-row {
+        grid-template-columns: 1fr
+      }
+
+      .products-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px
+      }
+
+      .hero-product-showcase {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+  </style>
+
+  
+
+</head>
+
+<body id="top">
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-logo">Fortitude Fabrics</div>
+    <div class="loader-bar"></div>
+  </div>
+
+
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#top" class="logo">
+      <div class="logo-icon">
+        <img src="https://static.wixstatic.com/media/1da17c_6d90cf7e6585424fa4597e6057087f8c~mv2.png" alt="logo"
+          onerror="this.style.display='none'">
+      </div>
+      <div class="logo-text">
+        Fortitude Fabrics
+        <span>Antistatic Textile Manufacturer</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#admin">Admin</a></li>
+      <li><a href="#enquiry" class="nav-enquire">Enquire Now</a></li>
+    </ul>
+    <button class="menu-btn" aria-label="Toggle Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge reveal">
+          <span class="hero-badge-dot"></span>
+          <span>Manufacturer &amp; Supplier — Wyra, Telangana</span>
+        </div>
+        <h1 class="hero-title reveal d1">
+          Precision-Made<br><em>Antistatic</em><br>Protective Wear
+        </h1>
+        <p class="hero-sub reveal d2">
+          High-quality antistatic coveralls, head caps, and shoe covers — engineered for cleanrooms, electronics
+          manufacturing, pharma, and laboratory environments. Enquiry-based, customizable, bulk orders welcome.
+        </p>
+        <div class="hero-btns reveal d3">
+          <a href="#products" class="btn-gold">View Products</a>
+          <a href="https://www.fortitudefabric.com/_files/ugd/1da17c_18116ac747144f94ae8310de76f5c6b9.pdf"
+            target="_blank" class="btn-outline">Download Catalogue</a>
+        </div>
+        <div class="hero-stats reveal d4">
+          <div class="hero-stat">
+            <div class="n">6+</div>
+            <div class="l">Product Variants</div>
+          </div>
+          <div class="hero-stat">
+            <div class="n">B2B</div>
+            <div class="l">Enquiry Based</div>
+          </div>
+          <div class="hero-stat">
+            <div class="n">100%</div>
+            <div class="l">Antistatic Certified</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right reveal d2">
+        <div class="hero-tag">
+          <div class="n">6</div>
+          <div class="l">Products</div>
+        </div>
+        <div class="hero-product-showcase">
+          <div class="showcase-card">
+            <img class="showcase-img"
+              src="https://static.wixstatic.com/media/1da17c_3d237bff0c7342b1a59c241efeac189b~mv2.png"
+              alt="Woven Coverall">
+            <div class="showcase-name">Woven Coverall</div>
+            <div class="showcase-type">Reusable</div>
+          </div>
+          <div class="showcase-card">
+            <img class="showcase-img"
+              src="https://static.wixstatic.com/media/1da17c_a1914914a7d4442b972179c8a0c08675~mv2.png"
+              alt="Non-Woven Coverall">
+            <div class="showcase-name">Non-Woven Coverall</div>
+            <div class="showcase-type">Disposable</div>
+          </div>
+          <div class="showcase-card">
+            <img class="showcase-img"
+              src="https://static.wixstatic.com/media/1da17c_0c7969ba231c49c6b75d036a73160e3e~mv2.png"
+              alt="Head Cap Woven">
+            <div class="showcase-name">Head Cap Woven</div>
+            <div class="showcase-type">Reusable</div>
+          </div>
+          <div class="showcase-card">
+            <img class="showcase-img"
+              src="https://static.wixstatic.com/media/1da17c_faecb4cefcd24520a60f244284d6577f~mv2.png"
+              alt="Shoe Cover Woven">
+            <div class="showcase-name">Shoe Cover Woven</div>
+            <div class="showcase-type">Reusable</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-inner" aria-hidden="true">
+      <span>Antistatic Coveralls</span><span class="dot">◆</span>
+      <span>Woven &amp; Non-Woven Fabric</span><span class="dot">◆</span>
+      <span>Head Caps</span><span class="dot">◆</span>
+      <span>Shoe Covers</span><span class="dot">◆</span>
+      <span>Cleanroom Certified</span><span class="dot">◆</span>
+      <span>Bulk Orders Welcome</span><span class="dot">◆</span>
+      <span>Custom Fits Available</span><span class="dot">◆</span>
+      <span>Wyra, Khammam — Telangana</span><span class="dot">◆</span>
+      <span>Antistatic Coveralls</span><span class="dot">◆</span>
+      <span>Woven &amp; Non-Woven Fabric</span><span class="dot">◆</span>
+      <span>Head Caps</span><span class="dot">◆</span>
+      <span>Shoe Covers</span><span class="dot">◆</span>
+      <span>Cleanroom Certified</span><span class="dot">◆</span>
+      <span>Bulk Orders Welcome</span><span class="dot">◆</span>
+      <span>Custom Fits Available</span><span class="dot">◆</span>
+      <span>Wyra, Khammam — Telangana</span><span class="dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" style="background:var(--white)">
+    <div class="about">
+      <div>
+        <div class="section-eyebrow reveal"><span>Who We Are</span></div>
+        <h2 class="section-title reveal d1">Dedicated<br><em>Antistatic Fabric</em><br>Manufacturer</h2>
+        <p class="body-text reveal d2">
+          Fortitude Fabrics is a specialized manufacturer of high-quality antistatic protective garments based in Wyra,
+          Khammam, Telangana. We produce and supply coveralls, head caps, and shoe covers in both woven and non-woven
+          variants — engineered to meet the rigorous demands of ESD-sensitive workplaces.
+        </p>
+        <div class="about-highlights reveal d3">
+          <div class="highlight-item">
+            <div class="hi-icon">🏭</div>
+            <div class="hi-text"><strong>In-House Manufacturing</strong>
+              <p>Every product is manufactured at our dedicated facility with stringent in-process quality checks.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="hi-icon">⚡</div>
+            <div class="hi-text"><strong>Antistatic Technology</strong>
+              <p>Advanced antistatic yarn and non-woven materials ensuring ESD protection across all our garment lines.
+              </p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="hi-icon">📦</div>
+            <div class="hi-text"><strong>Bulk & Custom Orders</strong>
+              <p>We cater to B2B clients — factories, pharma companies, electronics manufacturers — with flexible
+                quantities and custom sizing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-img-wrap reveal d2">
+        <img class="about-img-main"
+          src="https://static.wixstatic.com/media/1da17c_faa7a749696842ffbb2ecec55a159a97~mv2.png"
+          alt="Fortitude Fabrics Manufacturing" loading="lazy">
+        <div class="about-img-badge">
+          <div class="n">ESD</div>
+          <div class="l">Protection</div>
+          <div class="sub">Antistatic certified garments for every sensitive environment</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section class="products-section" id="products">
+    <div class="products-section-inner">
+      <div class="products-header">
+        <div>
+          <div class="section-eyebrow reveal"><span>Our Products</span></div>
+          <h2 class="section-title reveal d1">6 Antistatic<br><em>Protective Garments</em></h2>
+        </div>
+        <a href="https://www.fortitudefabric.com/_files/ugd/1da17c_18116ac747144f94ae8310de76f5c6b9.pdf" target="_blank"
+          class="btn-gold reveal d2">Download Catalogue</a>
+      </div>
+
+      <div class="products-tabs reveal">
+        <button class="tab active" onclick="filterProducts('all',this)">All Products</button>
+        <button class="tab" onclick="filterProducts('coverall',this)">Coveralls</button>
+        <button class="tab" onclick="filterProducts('headcap',this)">Head Caps</button>
+        <button class="tab" onclick="filterProducts('shoecover',this)">Shoe Covers</button>
+        <button class="tab" onclick="filterProducts('woven',this)">Woven Only</button>
+        <button class="tab" onclick="filterProducts('nonwoven',this)">Non-Woven Only</button>
+      </div>
+
+      <div class="product-groups" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section class="capabilities" id="capabilities">
+    <div class="capabilities-inner">
+      <div class="section-eyebrow reveal"><span>Our Capabilities</span></div>
+      <h2 class="section-title reveal d1">Built for<br><em>Demanding</em> Environments</h2>
+      <div class="cap-grid">
+        <div class="cap-item reveal">
+          <span class="cap-icon">⚡</span>
+          <span class="cap-num">01</span>
+          <div class="cap-title">ESD / Antistatic Protection</div>
+          <p class="cap-desc">All garments incorporate antistatic yarn or non-woven material ensuring consistent ESD
+            protection in electronics, pharma, and cleanroom environments.</p>
+        </div>
+        <div class="cap-item reveal d1">
+          <span class="cap-icon">🔬</span>
+          <span class="cap-num">02</span>
+          <div class="cap-title">Cleanroom Compliance</div>
+          <p class="cap-desc">Products are designed to meet cleanroom standards — suitable for ISO classified
+            environments, semiconductor fabs, and pharmaceutical facilities.</p>
+        </div>
+        <div class="cap-item reveal d2">
+          <span class="cap-icon">🎨</span>
+          <span class="cap-num">03</span>
+          <div class="cap-title">Custom Color &amp; Sizing</div>
+          <p class="cap-desc">We offer customizable color options and sizing — from XS to 5XL — ensuring your workforce
+            has properly fitting protective garments with your preferred specifications.</p>
+        </div>
+        <div class="cap-item reveal d3">
+          <span class="cap-icon">📦</span>
+          <span class="cap-num">04</span>
+          <div class="cap-title">Bulk Manufacturing</div>
+          <p class="cap-desc">Large-scale production capability to fulfill bulk B2B orders efficiently. We cater to
+            factories, hospitals, labs, and industrial clients across India.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="process-inner">
+      <div class="section-eyebrow reveal"><span>How To Order</span></div>
+      <h2 class="section-title reveal d1">Our Simple<br><em>Enquiry Process</em></h2>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="step-num">01</div>
+          <div class="step-title">Send Enquiry</div>
+          <p class="step-desc">Fill our enquiry form with product, quantity, and any customization needs.</p>
+        </div>
+        <div class="process-step reveal d1">
+          <div class="step-num">02</div>
+          <div class="step-title">Consultation</div>
+          <p class="step-desc">Our team reviews your requirements and contacts you with options and pricing.</p>
+        </div>
+        <div class="process-step reveal d2">
+          <div class="step-num">03</div>
+          <div class="step-title">Sampling</div>
+          <p class="step-desc">We send product samples for quality verification and specification confirmation.</p>
+        </div>
+        <div class="process-step reveal d3">
+          <div class="step-num">04</div>
+          <div class="step-title">Production</div>
+          <p class="step-desc">Order confirmed — your garments are manufactured with strict quality control.</p>
+        </div>
+        <div class="process-step reveal d4">
+          <div class="step-num">05</div>
+          <div class="step-title">Delivery</div>
+          <p class="step-desc">Prompt dispatch with reliable logistics. Pan-India delivery available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why" id="why">
+    <div class="why-inner">
+      <div class="why-img-stack reveal">
+        <img class="why-img-a" src="https://static.wixstatic.com/media/1da17c_faa7a749696842ffbb2ecec55a159a97~mv2.png"
+          alt="Coverall" style="background:#f0ede6;padding:20px">
+        <img class="why-img-b" src="https://static.wixstatic.com/media/1da17c_6e29d81919cf4701898096e2733b803f~mv2.png"
+          alt="Head Cap" style="background:#f0ede6">
+        <div class="why-accent-box">
+          <div class="n">B2B</div>
+          <div class="l">Manufacturer</div>
+        </div>
+      </div>
+      <div>
+        <div class="section-eyebrow reveal"><span>Why Fortitude Fabrics</span></div>
+        <h2 class="section-title reveal d1">The Manufacturer<br>You Can <em>Rely On</em></h2>
+        <div class="why-features">
+          <div class="why-feature reveal d1">
+            <div class="wf-num">01</div>
+            <div>
+              <div class="wf-title">Trusted Antistatic Protection</div>
+              <p class="wf-desc">Woven and non-woven fabrics engineered with advanced antistatic technology — ensuring
+                consistent, validated ESD protection in sensitive environments like cleanrooms, electronics
+                manufacturing, and labs.</p>
+            </div>
+          </div>
+          <div class="why-feature reveal d2">
+            <div class="wf-num">02</div>
+            <div>
+              <div class="wf-title">Precision-Engineered Quality</div>
+              <p class="wf-desc">High-grade materials and strict in-process quality control deliver durability,
+                breathability, and long-term reliability — every garment passes our quality check before dispatch.</p>
+            </div>
+          </div>
+          <div class="why-feature reveal d3">
+            <div class="wf-num">03</div>
+            <div>
+              <div class="wf-title">Customizable Solutions</div>
+              <p class="wf-desc">Custom fits, styles, colors, and fabric options to meet your unique industry
+                requirements — without compromising on safety compliance or comfort.</p>
+            </div>
+          </div>
+          <div class="why-feature reveal d4">
+            <div class="wf-num">04</div>
+            <div>
+              <div class="wf-title">Reliable Service &amp; Fast Delivery</div>
+              <p class="wf-desc">Seamless B2B experience from consultation to doorstep — prompt dispatch, dedicated
+                support, and pan-India logistics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENQUIRY FORM -->
+  <section class="enquiry" id="enquiry">
+    <div class="enquiry-inner">
+      <div>
+        <div class="section-eyebrow reveal"><span>Get In Touch</span></div>
+        <h2 class="section-title reveal d1">Request a<br><em>Quote or Sample</em></h2>
+        <p class="body-text reveal d2">We are a manufacturer and do not sell retail. All orders are processed through
+          enquiry — our team will respond within 24 hours with pricing, minimum order quantities, and sample
+          availability.</p>
+        <div class="contact-info-blocks reveal d3">
+          <div class="cib">
+            <div class="cib-icon">📍</div>
+            <div><span class="cib-label">Factory Location</span>
+              <div class="cib-value">Wyra, Khammam District<br>Telangana, India</div>
+            </div>
+          </div>
+          <div class="cib">
+            <div class="cib-icon">📧</div>
+            <div><span class="cib-label">Email Us</span>
+              <div class="cib-value"><a href="mailto:fortitudefabrics.pvt.ltd@gmail.com"
+                  style="color:rgba(255,255,255,0.7);text-decoration:none">fortitudefabrics.pvt.ltd@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="cib">
+            <div class="cib-icon">🕐</div>
+            <div><span class="cib-label">Working Hours</span>
+              <table class="hours-table">
+                <tr>
+                  <td>Mon – Fri</td>
+                  <td>8:00 AM – 8:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>9:00 AM – 7:00 PM</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="cib">
+            <div class="cib-icon">🔗</div>
+            <div><span class="cib-label">Follow Us</span>
+              <div class="cib-value"><a href="https://www.linkedin.com/company/fortitude-fabric/" target="_blank"
+                  style="color:rgba(255,255,255,0.7);text-decoration:none">LinkedIn — Fortitude Fabric</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="enq-form reveal d2">
+        <div class="form-title">Product Enquiry</div>
+        <div class="form-sub">Fill in your details and our team will get back to you within 24 hours.</div>
+        <div class="form-row">
+          <div class="field">
+            <label>Full Name *</label>
+            <input type="text" id="f-name" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label>Company Name</label>
+            <input type="text" placeholder="Company / Organisation">
+          </div>
+          <div class="field">
+            <label>Email Address *</label>
+            <input type="email" placeholder="your@email.com">
+          </div>
+          <div class="field">
+            <label>Phone / WhatsApp</label>
+            <input type="tel" placeholder="+91 XXXXX XXXXX">
+          </div>
+          <div class="field field-full">
+            <label>Product Interest *</label>
+            <select id="f-product">
+              <option value="" disabled selected>Select a product</option>
+              <option>Multiple Products</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Approximate Quantity</label>
+            <select>
+              <option value="" disabled selected>Select range</option>
+              <option>50 – 100 pcs</option>
+              <option>100 – 500 pcs</option>
+              <option>500 – 1000 pcs</option>
+              <option>1000 – 5000 pcs</option>
+              <option>5000+ pcs</option>
+              <option>Will discuss</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Industry / Application</label>
+            <select>
+              <option value="" disabled selected>Select industry</option>
+              <option>Electronics Manufacturing</option>
+              <option>Semiconductor / Fab</option>
+              <option>Pharmaceutical</option>
+              <option>Cleanroom / Laboratory</option>
+              <option>Healthcare</option>
+              <option>Automotive</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field field-full">
+            <label>Additional Requirements</label>
+            <textarea placeholder="Custom color, sizing, special specs, or any other details..."></textarea>
+          </div>
+        </div>
+        <div class="submit-row">
+          <button class="btn-submit" onclick="handleSubmit()">Send Enquiry →</button>
+          <span class="submit-note">We respond within 24 hours</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMIN DASHBOARD -->
+  <section class="admin-section" id="admin">
+    <div class="admin-inner">
+      <div class="section-eyebrow reveal"><span>Admin Access</span></div>
+      <h2 class="section-title reveal d1">Admin<br><em>Control Dashboard</em></h2>
+      <p class="body-text reveal d2">Authorized admins can add, update, and delete products, manage teams, and track stock
+        levels from one control center.</p>
+
+      <div class="admin-shell reveal d3">
+        <div id="adminLoginCard">
+          <div class="admin-block-title">Admin Login</div>
+          <p class="admin-note">Default demo credentials: <strong>admin</strong> / <strong>admin123</strong>. Update the
+            password after login.</p>
+          <form id="admin-login-form" class="admin-form-grid">
+            <div class="admin-field">
+              <label for="admin-login-user">Username</label>
+              <input type="text" id="admin-login-user" placeholder="Enter username" autocomplete="username">
+            </div>
+            <div class="admin-field">
+              <label for="admin-login-pass">Password</label>
+              <input type="password" id="admin-login-pass" placeholder="Enter password" autocomplete="current-password">
+            </div>
+            <div class="admin-actions admin-field-full">
+              <button type="submit" class="admin-btn admin-btn-primary">Access Dashboard</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="adminPanel" class="admin-hidden">
+          <div class="admin-topbar">
+            <div>
+              <div class="admin-block-title">Welcome, <span id="adminWelcomeName">Admin</span></div>
+              <p class="admin-note" id="adminLastLoginText">Full permissions enabled for product, team, and stock control.
+              </p>
+            </div>
+            <div class="admin-actions">
+              <button type="button" id="admin-export-btn" class="admin-btn admin-btn-muted">Export Data</button>
+              <button type="button" id="admin-reset-btn" class="admin-btn admin-btn-gold">Reset Demo Data</button>
+              <button type="button" id="admin-logout-btn" class="admin-btn admin-btn-danger">Logout</button>
+            </div>
+          </div>
+
+          <div class="admin-stats" id="adminStats">
+            <div class="admin-stat">
+              <div class="admin-stat-label">Products</div>
+              <div class="admin-stat-value" id="statProducts">0</div>
+            </div>
+            <div class="admin-stat">
+              <div class="admin-stat-label">Team Members</div>
+              <div class="admin-stat-value" id="statTeams">0</div>
+            </div>
+            <div class="admin-stat">
+              <div class="admin-stat-label">Stock Items</div>
+              <div class="admin-stat-value" id="statStocks">0</div>
+            </div>
+            <div class="admin-stat">
+              <div class="admin-stat-label">Low Stock Alerts</div>
+              <div class="admin-stat-value" id="statLowStock">0</div>
+            </div>
+          </div>
+
+          <div class="admin-panels">
+            <article class="admin-card">
+              <h3>Products</h3>
+              <p class="admin-note">Create, edit, and remove catalog items shown on the website.</p>
+              <form id="admin-product-form" class="admin-form-grid">
+                <input type="hidden" id="admin-product-id">
+                <div class="admin-field">
+                  <label for="admin-product-name">Product Name</label>
+                  <input type="text" id="admin-product-name" placeholder="Antistatic Woven Coverall">
+                </div>
+                <div class="admin-field">
+                  <label for="admin-product-category">Category</label>
+                  <select id="admin-product-category">
+                    <option value="coverall">Coverall</option>
+                    <option value="headcap">Head Cap</option>
+                    <option value="shoecover">Shoe Cover</option>
+                  </select>
+                </div>
+                <div class="admin-field">
+                  <label for="admin-product-material">Material</label>
+                  <select id="admin-product-material">
+                    <option value="woven">Woven</option>
+                    <option value="nonwoven">Non-Woven</option>
+                  </select>
+                </div>
+                <div class="admin-field">
+                  <label for="admin-product-enquiry">Enquiry Label</label>
+                  <input type="text" id="admin-product-enquiry" placeholder="Head Cap - Woven">
+                </div>
+                <div class="admin-field admin-field-full">
+                  <label for="admin-product-image">Image URL</label>
+                  <input type="text" id="admin-product-image" placeholder="https://...">
+                </div>
+                <div class="admin-field admin-field-full">
+                  <label for="admin-product-desc">Description</label>
+                  <textarea id="admin-product-desc" placeholder="Write product summary..."></textarea>
+                </div>
+                <div class="admin-field admin-field-full">
+                  <label for="admin-product-specs">Specs (comma separated)</label>
+                  <input type="text" id="admin-product-specs" placeholder="Reusable, Antistatic, Breathable">
+                </div>
+                <div class="admin-actions admin-field-full">
+                  <button type="submit" id="admin-product-save-btn" class="admin-btn admin-btn-primary">Save Product</button>
+                  <button type="button" id="admin-product-clear-btn" class="admin-btn admin-btn-muted">Clear Form</button>
+                </div>
+              </form>
+
+              <div class="admin-table-wrap">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Category</th>
+                      <th>Material</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-products-body"></tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="admin-card">
+              <h3>Teams</h3>
+              <p class="admin-note">Manage team roster, role allocation, and active status.</p>
+              <form id="admin-team-form" class="admin-form-grid">
+                <input type="hidden" id="admin-team-id">
+                <div class="admin-field">
+                  <label for="admin-team-name">Member Name</label>
+                  <input type="text" id="admin-team-name" placeholder="Priya Reddy">
+                </div>
+                <div class="admin-field">
+                  <label for="admin-team-role">Role</label>
+                  <input type="text" id="admin-team-role" placeholder="Production Lead">
+                </div>
+                <div class="admin-field">
+                  <label for="admin-team-email">Email</label>
+                  <input type="email" id="admin-team-email" placeholder="name@company.com">
+                </div>
+                <div class="admin-field">
+                  <label for="admin-team-phone">Phone</label>
+                  <input type="text" id="admin-team-phone" placeholder="+91 XXXXXXXXXX">
+                </div>
+                <div class="admin-field">
+                  <label for="admin-team-status">Status</label>
+                  <select id="admin-team-status">
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                </div>
+                <div class="admin-actions admin-field-full">
+                  <button type="submit" id="admin-team-save-btn" class="admin-btn admin-btn-primary">Save Member</button>
+                  <button type="button" id="admin-team-clear-btn" class="admin-btn admin-btn-muted">Clear Form</button>
+                </div>
+              </form>
+
+              <div class="admin-table-wrap">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Role</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-team-body"></tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="admin-card">
+              <h3>Stocks</h3>
+              <p class="admin-note">Track stock quantity, reorder level, and linked product.</p>
+              <form id="admin-stock-form" class="admin-form-grid form-3">
+                <input type="hidden" id="admin-stock-id">
+                <div class="admin-field">
+                  <label for="admin-stock-item">Stock Item</label>
+                  <input type="text" id="admin-stock-item" placeholder="Woven Coverall Batch">
+                </div>
+                <div class="admin-field">
+                  <label for="admin-stock-sku">SKU</label>
+                  <input type="text" id="admin-stock-sku" placeholder="FF-WC-001">
+                </div>
+                <div class="admin-field">
+                  <label for="admin-stock-link">Linked Product</label>
+                  <select id="admin-stock-link">
+                    <option value="">Not linked</option>
+                  </select>
+                </div>
+                <div class="admin-field">
+                  <label for="admin-stock-qty">Quantity</label>
+                  <input type="number" id="admin-stock-qty" min="0" step="1" placeholder="250">
+                </div>
+                <div class="admin-field">
+                  <label for="admin-stock-reorder">Reorder Level</label>
+                  <input type="number" id="admin-stock-reorder" min="0" step="1" placeholder="100">
+                </div>
+                <div class="admin-field">
+                  <label for="admin-stock-unit">Unit</label>
+                  <select id="admin-stock-unit">
+                    <option value="pcs">pcs</option>
+                    <option value="sets">sets</option>
+                    <option value="packs">packs</option>
+                    <option value="rolls">rolls</option>
+                  </select>
+                </div>
+                <div class="admin-actions admin-field-full">
+                  <button type="submit" id="admin-stock-save-btn" class="admin-btn admin-btn-primary">Save Stock</button>
+                  <button type="button" id="admin-stock-clear-btn" class="admin-btn admin-btn-muted">Clear Form</button>
+                </div>
+              </form>
+
+              <div class="admin-table-wrap">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Item</th>
+                      <th>Qty</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-stock-body"></tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+
+          <div class="admin-wide">
+            <div class="admin-wide-grid">
+              <div>
+                <h3>Security Settings</h3>
+                <p class="admin-note">Change admin password regularly to secure dashboard access.</p>
+                <form id="admin-security-form" class="admin-form-grid">
+                  <div class="admin-field">
+                    <label for="admin-current-pass">Current Password</label>
+                    <input type="password" id="admin-current-pass" autocomplete="current-password">
+                  </div>
+                  <div class="admin-field">
+                    <label for="admin-new-pass">New Password</label>
+                    <input type="password" id="admin-new-pass" autocomplete="new-password">
+                  </div>
+                  <div class="admin-field">
+                    <label for="admin-confirm-pass">Confirm Password</label>
+                    <input type="password" id="admin-confirm-pass" autocomplete="new-password">
+                  </div>
+                  <div class="admin-actions admin-field-full">
+                    <button type="submit" class="admin-btn admin-btn-primary">Update Password</button>
+                  </div>
+                </form>
+              </div>
+
+              <div>
+                <h3>Privilege Actions</h3>
+                <p class="admin-note">Use these admin-only controls for faster operations.</p>
+                <div class="admin-actions" style="margin-top:18px">
+                  <button type="button" id="admin-restock-low-btn" class="admin-btn admin-btn-gold">Restock Low Items +50</button>
+                  <button type="button" id="admin-activate-team-btn" class="admin-btn admin-btn-muted">Activate All Team</button>
+                  <button type="button" id="admin-create-stock-btn" class="admin-btn admin-btn-muted">Create Missing Stock Entries</button>
+                </div>
+                <div class="admin-alert" id="adminActionFeedback">No recent bulk actions.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-text">Fortitude Fabrics<span>Antistatic Textile Manufacturer</span></div>
+        <p>Specialized manufacturer of antistatic protective garments — coveralls, head caps, and shoe covers — for
+          ESD-sensitive industries across India.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#products">Antistatic Coveralls</a></li>
+          <li><a href="#products">Head Caps</a></li>
+          <li><a href="#products">Shoe Covers</a></li>
+          <li><a href="https://www.fortitudefabric.com/_files/ugd/1da17c_18116ac747144f94ae8310de76f5c6b9.pdf"
+              target="_blank">Download Catalogue</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#enquiry">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address>
+          Wyra, Khammam<br>
+          Telangana, India<br><br>
+          <a href="mailto:fortitudefabrics.pvt.ltd@gmail.com">fortitudefabrics.pvt.ltd@gmail.com</a><br><br>
+          Mon–Fri: 8am – 8pm<br>
+          Sat: 9am – 7pm
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Fortitude Fabrics. All rights reserved. Manufacturer of antistatic protective wear,
+        Telangana, India.</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/company/fortitude-fabric/" class="social-btn" target="_blank"
+          title="LinkedIn">in</a>
+        <a href="https://www.facebook.com/share/15HcCqwtPZ/" class="social-btn" target="_blank" title="Facebook">f</a>
+        <a href="https://www.instagram.com" class="social-btn" target="_blank" title="Instagram">ig</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Loader
+    window.addEventListener('load', () => {
+      setTimeout(() => document.getElementById('loader').classList.add('hidden'), 1600)
+    })
+
+    // Mobile menu
+    const menuBtn = document.querySelector('.menu-btn')
+    const navLinks = document.querySelector('.nav-links')
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'))
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.addEventListener('click', () => window.innerWidth <= 640 && navLinks.classList.remove('open'))
+      })
+    }
+
+    // Nav scroll
+    const nav = document.getElementById('nav')
+    window.addEventListener('scroll', () => {
+      if (nav) nav.classList.toggle('scrolled', window.scrollY > 60)
+    })
+
+    // Scroll reveal
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible') })
+    }, { threshold: 0.12 })
+
+    function registerRevealTargets(scope = document) {
+      scope.querySelectorAll('.reveal').forEach(node => obs.observe(node))
+    }
+
+    registerRevealTargets()
+
+    const STORAGE_KEY = 'fortitude_admin_dashboard_v1'
+    const SESSION_KEY = 'fortitude_admin_session_v1'
+
+    const CATEGORY_LABELS = {
+      coverall: 'Coverall',
+      headcap: 'Head Cap',
+      shoecover: 'Shoe Cover'
+    }
+
+    const MATERIAL_LABELS = {
+      woven: 'Woven',
+      nonwoven: 'Non-Woven'
+    }
+
+    const DEFAULT_DATA = {
+      admin: {
+        username: 'admin',
+        password: 'admin123',
+        lastLogin: ''
+      },
+      products: [
+        {
+          id: 'prod_headcap_woven',
+          name: 'Head Cap — Woven',
+          category: 'headcap',
+          material: 'woven',
+          description: 'Durable, reusable antistatic head cap made from woven polyester-cotton blend. Eliminates static in ESD-sensitive areas. Comfortable fit for extended wear in cleanrooms and labs.',
+          specs: ['Reusable', 'Antistatic', 'Breathable', 'Washable'],
+          image: 'https://static.wixstatic.com/media/1da17c_0c7969ba231c49c6b75d036a73160e3e~mv2.png',
+          enquiryName: 'Head Cap - Woven'
+        },
+        {
+          id: 'prod_headcap_nonwoven',
+          name: 'Head Cap — Non-Woven',
+          category: 'headcap',
+          material: 'nonwoven',
+          description: 'Lightweight disposable antistatic head cap ideal for single-use applications. Cost-effective solution for high-volume environments requiring daily garment changes.',
+          specs: ['Disposable', 'Antistatic', 'Lightweight', 'Bulk Pack'],
+          image: 'https://static.wixstatic.com/media/1da17c_eb83c98b398c418287a1dda4f0ba8abc~mv2.png',
+          enquiryName: 'Head Cap - Non Woven'
+        },
+        {
+          id: 'prod_shoecover_woven',
+          name: 'Shoe Cover — Woven',
+          category: 'shoecover',
+          material: 'woven',
+          description: 'Robust antistatic woven shoe cover providing ESD grounding from foot to floor. Slip-resistant, durable, and fully washable — designed for long-term industrial use.',
+          specs: ['Reusable', 'ESD Grounding', 'Slip-Resistant', 'Washable'],
+          image: 'https://static.wixstatic.com/media/1da17c_faecb4cefcd24520a60f244284d6577f~mv2.png',
+          enquiryName: 'Antistatic Shoe Cover - Woven'
+        },
+        {
+          id: 'prod_coverall_woven',
+          name: 'Antistatic Woven Coverall',
+          category: 'coverall',
+          material: 'woven',
+          description: 'Full-body reusable coverall from tightly woven polyester-cotton blend. Front zipper closure, elastic cuffs and ankles, optional hood. Ideal for manufacturing, maintenance, cleanrooms, and healthcare.',
+          specs: ['Reusable', 'Full Body', 'Zip Closure', 'Custom Color', 'Custom Size'],
+          image: 'https://static.wixstatic.com/media/1da17c_3d237bff0c7342b1a59c241efeac189b~mv2.png',
+          enquiryName: 'Antistatic Woven Coverall'
+        },
+        {
+          id: 'prod_coverall_nonwoven',
+          name: 'Antistatic Non-Woven Coverall',
+          category: 'coverall',
+          material: 'nonwoven',
+          description: 'Disposable full-body coverall for single-use cleanroom environments. Lightweight and cost-effective while maintaining proper antistatic performance — perfect for pharma and electronics sectors.',
+          specs: ['Disposable', 'Full Body', 'Lightweight', 'Bulk Orders'],
+          image: 'https://static.wixstatic.com/media/1da17c_a1914914a7d4442b972179c8a0c08675~mv2.png',
+          enquiryName: 'Antistatic Non Woven Coverall'
+        },
+        {
+          id: 'prod_shoecover_nonwoven',
+          name: 'Shoe Cover — Non-Woven',
+          category: 'shoecover',
+          material: 'nonwoven',
+          description: 'Disposable antistatic non-woven shoe cover for single-use applications. Maintains ESD protection standards while offering maximum hygiene and convenience for high-turnover environments.',
+          specs: ['Disposable', 'Antistatic', 'Hygienic', 'Bulk Pack'],
+          image: 'https://static.wixstatic.com/media/1da17c_8e36764e6c224d6f8c7dd7b1d9e558a7~mv2.png',
+          enquiryName: 'Antistatic Shoe Cover - Non Woven'
+        }
+      ],
+      team: [
+        {
+          id: 'team_1',
+          name: 'Ravi Kumar',
+          role: 'Production Lead',
+          email: 'ravi@fortitudefabrics.in',
+          phone: '+91 90000 10001',
+          status: 'active'
+        },
+        {
+          id: 'team_2',
+          name: 'Sowmya Devi',
+          role: 'Quality Supervisor',
+          email: 'sowmya@fortitudefabrics.in',
+          phone: '+91 90000 10002',
+          status: 'active'
+        },
+        {
+          id: 'team_3',
+          name: 'Vikram Reddy',
+          role: 'Supply Coordinator',
+          email: 'vikram@fortitudefabrics.in',
+          phone: '+91 90000 10003',
+          status: 'inactive'
+        }
+      ],
+      stocks: [
+        {
+          id: 'stock_1',
+          itemName: 'Woven Coverall Batch',
+          sku: 'FF-WC-001',
+          linkedProductId: 'prod_coverall_woven',
+          quantity: 420,
+          reorderLevel: 150,
+          unit: 'pcs'
+        },
+        {
+          id: 'stock_2',
+          itemName: 'Non-Woven Coverall Pack',
+          sku: 'FF-NWC-001',
+          linkedProductId: 'prod_coverall_nonwoven',
+          quantity: 110,
+          reorderLevel: 120,
+          unit: 'pcs'
+        },
+        {
+          id: 'stock_3',
+          itemName: 'Woven Head Cap Box',
+          sku: 'FF-HCW-001',
+          linkedProductId: 'prod_headcap_woven',
+          quantity: 260,
+          reorderLevel: 100,
+          unit: 'pcs'
+        },
+        {
+          id: 'stock_4',
+          itemName: 'Non-Woven Shoe Cover Pack',
+          sku: 'FF-SCN-001',
+          linkedProductId: 'prod_shoecover_nonwoven',
+          quantity: 80,
+          reorderLevel: 90,
+          unit: 'pcs'
+        }
+      ]
+    }
+
+    let appData = loadAppData()
+    let currentProductFilter = 'all'
+
+    function cloneDeep(value) {
+      return JSON.parse(JSON.stringify(value))
+    }
+
+    function uid(prefix) {
+      return `${prefix}_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`
+    }
+
+    function escapeHtml(input = '') {
+      return String(input)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
+    }
+
+    function escapeAttr(input = '') {
+      return escapeHtml(input).replace(/`/g, '&#96;')
+    }
+
+    function asText(input, fallback = '') {
+      return typeof input === 'string' && input.trim() ? input.trim() : fallback
+    }
+
+    function toSpecsArray(value) {
+      if (Array.isArray(value)) return value.map(v => String(v).trim()).filter(Boolean)
+      if (typeof value === 'string') return value.split(',').map(v => v.trim()).filter(Boolean)
+      return []
+    }
+
+    function normalizeProduct(product, index = 0) {
+      const fallback = DEFAULT_DATA.products[index % DEFAULT_DATA.products.length]
+      return {
+        id: asText(product?.id, uid('prod')),
+        name: asText(product?.name, fallback.name),
+        category: asText(product?.category, fallback.category),
+        material: asText(product?.material, fallback.material),
+        description: asText(product?.description, fallback.description),
+        specs: toSpecsArray(product?.specs).length ? toSpecsArray(product?.specs) : fallback.specs,
+        image: asText(product?.image, fallback.image),
+        enquiryName: asText(product?.enquiryName, fallback.enquiryName)
+      }
+    }
+
+    function normalizeTeam(member, index = 0) {
+      const fallback = DEFAULT_DATA.team[index % DEFAULT_DATA.team.length]
+      return {
+        id: asText(member?.id, uid('team')),
+        name: asText(member?.name, fallback.name),
+        role: asText(member?.role, fallback.role),
+        email: asText(member?.email, fallback.email),
+        phone: asText(member?.phone, fallback.phone),
+        status: asText(member?.status, fallback.status) === 'inactive' ? 'inactive' : 'active'
+      }
+    }
+
+    function normalizeStock(stock, index = 0) {
+      const fallback = DEFAULT_DATA.stocks[index % DEFAULT_DATA.stocks.length]
+      const quantity = Number.isFinite(Number(stock?.quantity)) ? Math.max(0, Number(stock.quantity)) : fallback.quantity
+      const reorderLevel = Number.isFinite(Number(stock?.reorderLevel)) ? Math.max(0, Number(stock.reorderLevel)) : fallback.reorderLevel
+      return {
+        id: asText(stock?.id, uid('stock')),
+        itemName: asText(stock?.itemName, fallback.itemName),
+        sku: asText(stock?.sku, fallback.sku),
+        linkedProductId: asText(stock?.linkedProductId, ''),
+        quantity,
+        reorderLevel,
+        unit: asText(stock?.unit, fallback.unit)
+      }
+    }
+
+    function loadAppData() {
+      const fallback = cloneDeep(DEFAULT_DATA)
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY)
+        if (!raw) return fallback
+        const parsed = JSON.parse(raw)
+        if (!parsed || typeof parsed !== 'object') return fallback
+
+        const products = Array.isArray(parsed.products) && parsed.products.length
+          ? parsed.products.map((p, idx) => normalizeProduct(p, idx))
+          : fallback.products
+
+        const team = Array.isArray(parsed.team)
+          ? parsed.team.map((m, idx) => normalizeTeam(m, idx))
+          : fallback.team
+
+        const stocks = Array.isArray(parsed.stocks)
+          ? parsed.stocks.map((s, idx) => normalizeStock(s, idx))
+          : fallback.stocks
+
+        return {
+          admin: {
+            username: asText(parsed.admin?.username, fallback.admin.username),
+            password: asText(parsed.admin?.password, fallback.admin.password),
+            lastLogin: asText(parsed.admin?.lastLogin, '')
+          },
+          products,
+          team,
+          stocks
+        }
+      } catch {
+        return fallback
+      }
+    }
+
+    function saveAppData() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(appData))
+    }
+
+    function categoryLabel(category) {
+      return CATEGORY_LABELS[category] || category
+    }
+
+    function materialLabel(material) {
+      return MATERIAL_LABELS[material] || material
+    }
+
+    function findProductById(id) {
+      return appData.products.find(product => product.id === id)
+    }
+
+    function getStockStatus(stock) {
+      return Number(stock.quantity) <= Number(stock.reorderLevel) ? 'low' : 'ok'
+    }
+
+    function formatDateTime(input) {
+      if (!input) return 'No login recorded yet'
+      const date = new Date(input)
+      if (Number.isNaN(date.getTime())) return 'No login recorded yet'
+      return date.toLocaleString()
+    }
+
+    function setAdminFeedback(message) {
+      const feedback = document.getElementById('adminActionFeedback')
+      if (feedback) feedback.textContent = message
+    }
+
+    function createProductCardMarkup(product) {
+      const badgeClass = product.material === 'nonwoven' ? 'badge-nonwoven' : 'badge-woven'
+      const specs = product.specs.map(spec => `<span class="spec-tag">${escapeHtml(spec)}</span>`).join('')
+      return `
+        <div class="product-card" data-cat="${escapeAttr(`${product.category} ${product.material}`)}">
+          <div class="product-img-wrap">
+            <img src="${escapeAttr(product.image)}" alt="${escapeAttr(product.name)}" loading="lazy">
+            <span class="product-badge ${badgeClass}">${escapeHtml(materialLabel(product.material))}</span>
+          </div>
+          <div class="product-body">
+            <div class="product-cat">${escapeHtml(categoryLabel(product.category))}</div>
+            <div class="product-name">${escapeHtml(product.name)}</div>
+            <p class="product-desc">${escapeHtml(product.description)}</p>
+            <div class="product-specs">${specs}</div>
+            <a href="#enquiry" class="product-enquire" data-prefill="${escapeAttr(product.enquiryName)}">Enquire for Price &amp; Specs</a>
+          </div>
+        </div>
+      `
+    }
+
+    function renderPublicProducts() {
+      const container = document.getElementById('productsGrid')
+      if (!container) return
+
+      const groups = [
+        { key: 'woven', title: 'Woven Products', meta: 'Reusable antistatic garments', revealClass: 'reveal' },
+        { key: 'nonwoven', title: 'Non-Woven Products', meta: 'Disposable antistatic garments', revealClass: 'reveal d1' }
+      ]
+
+      container.innerHTML = groups.map(group => {
+        const cards = appData.products
+          .filter(product => product.material === group.key)
+          .map(createProductCardMarkup)
+          .join('')
+
+        const safeCards = cards || `
+          <article class="product-card">
+            <div class="product-body">
+              <div class="product-name">No ${escapeHtml(group.title)} Available</div>
+              <p class="product-desc">Add products from the admin dashboard to populate this category.</p>
+            </div>
+          </article>
+        `
+
+        return `
+          <div class="product-group ${group.revealClass}" data-group="${group.key}">
+            <div class="product-group-head">
+              <h3 class="product-group-title">${group.title}</h3>
+              <div class="product-group-meta">${group.meta}</div>
+            </div>
+            <div class="products-grid">${safeCards}</div>
+          </div>
+        `
+      }).join('')
+
+      registerRevealTargets(container)
+      applyProductFilter()
+    }
+
+    function renderEnquiryOptions(selected = '') {
+      const select = document.getElementById('f-product')
+      if (!select) return
+
+      const currentValue = selected || select.value
+      const dynamicOptions = appData.products.map(product => {
+        const label = product.enquiryName || product.name.replace(/—/g, '-')
+        const isSelected = currentValue && currentValue === label ? ' selected' : ''
+        return `<option${isSelected}>${escapeHtml(label)}</option>`
+      }).join('')
+
+      const placeholderSelected = !currentValue ? ' selected' : ''
+      const multiSelected = currentValue === 'Multiple Products' ? ' selected' : ''
+
+      select.innerHTML = `
+        <option value="" disabled${placeholderSelected}>Select a product</option>
+        ${dynamicOptions}
+        <option${multiSelected}>Multiple Products</option>
+      `
+    }
+
+    function renderStockProductOptions(selected = '') {
+      const select = document.getElementById('admin-stock-link')
+      if (!select) return
+      const current = selected || select.value
+      const options = appData.products.map(product => {
+        const isSelected = current === product.id ? ' selected' : ''
+        return `<option value="${escapeAttr(product.id)}"${isSelected}>${escapeHtml(product.name)}</option>`
+      }).join('')
+      const noneSelected = !current ? ' selected' : ''
+      select.innerHTML = `<option value=""${noneSelected}>Not linked</option>${options}`
+    }
+
+    function renderAdminStats() {
+      const productCount = appData.products.length
+      const teamCount = appData.team.length
+      const stockCount = appData.stocks.length
+      const lowStockCount = appData.stocks.filter(stock => getStockStatus(stock) === 'low').length
+
+      const setValue = (id, value) => {
+        const node = document.getElementById(id)
+        if (node) node.textContent = String(value)
+      }
+
+      setValue('statProducts', productCount)
+      setValue('statTeams', teamCount)
+      setValue('statStocks', stockCount)
+      setValue('statLowStock', lowStockCount)
+    }
+
+    function renderAdminProductsTable() {
+      const tbody = document.getElementById('admin-products-body')
+      if (!tbody) return
+      tbody.innerHTML = appData.products.map(product => `
+        <tr>
+          <td>
+            <strong>${escapeHtml(product.name)}</strong>
+            <div class="mini">${escapeHtml(product.enquiryName)}</div>
+          </td>
+          <td>${escapeHtml(categoryLabel(product.category))}</td>
+          <td><span class="admin-chip ${product.material === 'woven' ? 'chip-woven' : 'chip-nonwoven'}">${escapeHtml(materialLabel(product.material))}</span></td>
+          <td>
+            <button type="button" class="admin-link-btn" data-action="edit-product" data-id="${escapeAttr(product.id)}">Edit</button>
+            <button type="button" class="admin-link-btn delete" data-action="delete-product" data-id="${escapeAttr(product.id)}">Delete</button>
+          </td>
+        </tr>
+      `).join('')
+    }
+
+    function renderAdminTeamTable() {
+      const tbody = document.getElementById('admin-team-body')
+      if (!tbody) return
+      tbody.innerHTML = appData.team.map(member => `
+        <tr>
+          <td>
+            <strong>${escapeHtml(member.name)}</strong>
+            <div class="mini">${escapeHtml(member.email)}</div>
+          </td>
+          <td>${escapeHtml(member.role)}</td>
+          <td><span class="admin-chip ${member.status === 'active' ? 'chip-active' : 'chip-inactive'}">${escapeHtml(member.status)}</span></td>
+          <td>
+            <button type="button" class="admin-link-btn" data-action="edit-team" data-id="${escapeAttr(member.id)}">Edit</button>
+            <button type="button" class="admin-link-btn delete" data-action="delete-team" data-id="${escapeAttr(member.id)}">Delete</button>
+          </td>
+        </tr>
+      `).join('')
+    }
+
+    function renderAdminStockTable() {
+      const tbody = document.getElementById('admin-stock-body')
+      if (!tbody) return
+      tbody.innerHTML = appData.stocks.map(stock => {
+        const product = findProductById(stock.linkedProductId)
+        const status = getStockStatus(stock)
+        const chipClass = status === 'low' ? 'chip-stock-low' : 'chip-stock-ok'
+        return `
+          <tr>
+            <td>
+              <strong>${escapeHtml(stock.itemName)}</strong>
+              <div class="mini">${escapeHtml(stock.sku)}${product ? ` • ${escapeHtml(product.name)}` : ''}</div>
+            </td>
+            <td>${escapeHtml(String(stock.quantity))} ${escapeHtml(stock.unit)}</td>
+            <td><span class="admin-chip ${chipClass}">${status === 'low' ? 'Low' : 'Healthy'}</span></td>
+            <td>
+              <button type="button" class="admin-link-btn" data-action="edit-stock" data-id="${escapeAttr(stock.id)}">Edit</button>
+              <button type="button" class="admin-link-btn delete" data-action="delete-stock" data-id="${escapeAttr(stock.id)}">Delete</button>
+            </td>
+          </tr>
+        `
+      }).join('')
+    }
+
+    function renderAdminHeader() {
+      const welcomeName = document.getElementById('adminWelcomeName')
+      const lastLoginText = document.getElementById('adminLastLoginText')
+      if (welcomeName) welcomeName.textContent = appData.admin.username
+      if (lastLoginText) lastLoginText.textContent = `Last login: ${formatDateTime(appData.admin.lastLogin)}`
+    }
+
+    function renderAdminPanel() {
+      renderAdminHeader()
+      renderAdminStats()
+      renderAdminProductsTable()
+      renderAdminTeamTable()
+      renderAdminStockTable()
+      renderStockProductOptions()
+    }
+
+    function clearProductForm() {
+      const form = document.getElementById('admin-product-form')
+      if (!form) return
+      form.reset()
+      const hiddenId = document.getElementById('admin-product-id')
+      const saveBtn = document.getElementById('admin-product-save-btn')
+      if (hiddenId) hiddenId.value = ''
+      if (saveBtn) saveBtn.textContent = 'Save Product'
+    }
+
+    function clearTeamForm() {
+      const form = document.getElementById('admin-team-form')
+      if (!form) return
+      form.reset()
+      const hiddenId = document.getElementById('admin-team-id')
+      const saveBtn = document.getElementById('admin-team-save-btn')
+      if (hiddenId) hiddenId.value = ''
+      if (saveBtn) saveBtn.textContent = 'Save Member'
+    }
+
+    function clearStockForm() {
+      const form = document.getElementById('admin-stock-form')
+      if (!form) return
+      form.reset()
+      const hiddenId = document.getElementById('admin-stock-id')
+      const saveBtn = document.getElementById('admin-stock-save-btn')
+      if (hiddenId) hiddenId.value = ''
+      if (saveBtn) saveBtn.textContent = 'Save Stock'
+      renderStockProductOptions('')
+    }
+
+    function syncViews(selectedEnquiryValue = '') {
+      renderEnquiryOptions(selectedEnquiryValue)
+      renderPublicProducts()
+      renderAdminPanel()
+    }
+
+    function setAdminView() {
+      const isLoggedIn = localStorage.getItem(SESSION_KEY) === '1'
+      const loginCard = document.getElementById('adminLoginCard')
+      const panel = document.getElementById('adminPanel')
+      if (loginCard) loginCard.classList.toggle('admin-hidden', isLoggedIn)
+      if (panel) panel.classList.toggle('admin-hidden', !isLoggedIn)
+    }
+
+    function applyProductFilter() {
+      document.querySelectorAll('.product-card').forEach(card => {
+        const categories = (card.dataset.cat || '').split(/\s+/)
+        card.style.display = (currentProductFilter === 'all' || categories.includes(currentProductFilter)) ? 'block' : 'none'
+      })
+
+      document.querySelectorAll('.product-group').forEach(group => {
+        const hasVisibleCard = Array.from(group.querySelectorAll('.product-card'))
+          .some(card => card.style.display !== 'none')
+        group.classList.toggle('hidden', !hasVisibleCard)
+      })
+    }
+
+    // Product filter (called by inline tab buttons)
+    function filterProducts(category, button) {
+      currentProductFilter = category
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'))
+      if (button) button.classList.add('active')
+      applyProductFilter()
+    }
+
+    // Prefill product select
+    function prefill(productLabel) {
+      setTimeout(() => {
+        const select = document.getElementById('f-product')
+        if (!select) return
+        for (const option of select.options) {
+          if (option.value === productLabel || option.text === productLabel) {
+            select.value = option.value
+            break
+          }
+        }
+      }, 300)
+    }
+
+    // Form submit
+    function handleSubmit() {
+      const name = document.getElementById('f-name')?.value.trim() || ''
+      const product = document.getElementById('f-product')?.value || ''
+      const company = document.querySelector('input[placeholder="Company / Organisation"]')?.value.trim() || ''
+      const email = document.querySelector('input[type="email"][placeholder="your@email.com"]')?.value.trim() || ''
+      const phone = document.querySelector('input[type="tel"][placeholder="+91 XXXXX XXXXX"]')?.value.trim() || ''
+      const qtyNode = document.querySelectorAll('#enquiry select')[1]
+      const industryNode = document.querySelectorAll('#enquiry select')[2]
+      const detailsNode = document.querySelector('#enquiry textarea')
+      const quantityText = qtyNode ? qtyNode.value : ''
+      const industryText = industryNode ? industryNode.value : ''
+      const details = detailsNode ? detailsNode.value.trim() : ''
+
+      if (!name) { alert('Please enter your name.'); return }
+      if (!product) { alert('Please select product interest.'); return }
+
+      const lines = [
+        'Hello Fortitude Fabrics,',
+        '',
+        'I would like to enquire about your products.',
+        '',
+        `Name: ${name}`,
+        `Company: ${company || '-'}`,
+        `Email: ${email || '-'}`,
+        `Phone: ${phone || '-'}`,
+        `Product Interest: ${product}`,
+        `Quantity: ${quantityText || '-'}`,
+        `Industry: ${industryText || '-'}`,
+        `Additional Requirements: ${details || '-'}`
+      ]
+
+      const subject = encodeURIComponent('Product Enquiry - Fortitude Fabrics')
+      const body = encodeURIComponent(lines.join('\n'))
+      window.location.href = `mailto:fortitudefabrics.pvt.ltd@gmail.com?subject=${subject}&body=${body}`
+    }
+
+    function bindAdminEvents() {
+      const loginForm = document.getElementById('admin-login-form')
+      const logoutBtn = document.getElementById('admin-logout-btn')
+      const resetBtn = document.getElementById('admin-reset-btn')
+      const exportBtn = document.getElementById('admin-export-btn')
+
+      if (loginForm) {
+        loginForm.addEventListener('submit', event => {
+          event.preventDefault()
+          const username = document.getElementById('admin-login-user')?.value.trim() || ''
+          const password = document.getElementById('admin-login-pass')?.value || ''
+          if (username === appData.admin.username && password === appData.admin.password) {
+            appData.admin.lastLogin = new Date().toISOString()
+            saveAppData()
+            localStorage.setItem(SESSION_KEY, '1')
+            setAdminView()
+            renderAdminPanel()
+            loginForm.reset()
+            setAdminFeedback('Admin login successful.')
+          } else {
+            alert('Invalid admin credentials.')
+          }
+        })
+      }
+
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', () => {
+          localStorage.removeItem(SESSION_KEY)
+          setAdminView()
+          setAdminFeedback('Admin logged out.')
+        })
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          if (!confirm('Reset dashboard data to default demo content?')) return
+          appData = cloneDeep(DEFAULT_DATA)
+          saveAppData()
+          clearProductForm()
+          clearTeamForm()
+          clearStockForm()
+          syncViews()
+          setAdminFeedback('Dashboard data reset to default content.')
+        })
+      }
+
+      if (exportBtn) {
+        exportBtn.addEventListener('click', () => {
+          const blob = new Blob([JSON.stringify(appData, null, 2)], { type: 'application/json' })
+          const url = URL.createObjectURL(blob)
+          const link = document.createElement('a')
+          link.href = url
+          link.download = 'fortitude-admin-data.json'
+          document.body.appendChild(link)
+          link.click()
+          link.remove()
+          URL.revokeObjectURL(url)
+          setAdminFeedback('Data export generated.')
+        })
+      }
+
+      const productForm = document.getElementById('admin-product-form')
+      if (productForm) {
+        productForm.addEventListener('submit', event => {
+          event.preventDefault()
+          const id = document.getElementById('admin-product-id')?.value.trim() || ''
+          const name = document.getElementById('admin-product-name')?.value.trim() || ''
+          const category = document.getElementById('admin-product-category')?.value || 'coverall'
+          const material = document.getElementById('admin-product-material')?.value || 'woven'
+          const enquiryName = document.getElementById('admin-product-enquiry')?.value.trim() || name.replace(/—/g, '-')
+          const image = document.getElementById('admin-product-image')?.value.trim() || ''
+          const description = document.getElementById('admin-product-desc')?.value.trim() || ''
+          const specs = toSpecsArray(document.getElementById('admin-product-specs')?.value || '')
+
+          if (!name || !image || !description) {
+            alert('Please fill product name, image URL, and description.')
+            return
+          }
+
+          const payload = {
+            id: id || uid('prod'),
+            name,
+            category,
+            material,
+            description,
+            specs: specs.length ? specs : ['Antistatic'],
+            image,
+            enquiryName
+          }
+
+          if (id) {
+            appData.products = appData.products.map(product => product.id === id ? payload : product)
+          } else {
+            appData.products.push(payload)
+          }
+
+          saveAppData()
+          clearProductForm()
+          syncViews()
+          setAdminFeedback(`Product ${id ? 'updated' : 'added'}: ${payload.name}`)
+        })
+      }
+
+      const clearProductBtn = document.getElementById('admin-product-clear-btn')
+      if (clearProductBtn) clearProductBtn.addEventListener('click', clearProductForm)
+
+      const teamForm = document.getElementById('admin-team-form')
+      if (teamForm) {
+        teamForm.addEventListener('submit', event => {
+          event.preventDefault()
+          const id = document.getElementById('admin-team-id')?.value.trim() || ''
+          const name = document.getElementById('admin-team-name')?.value.trim() || ''
+          const role = document.getElementById('admin-team-role')?.value.trim() || ''
+          const email = document.getElementById('admin-team-email')?.value.trim() || ''
+          const phone = document.getElementById('admin-team-phone')?.value.trim() || ''
+          const status = document.getElementById('admin-team-status')?.value === 'inactive' ? 'inactive' : 'active'
+
+          if (!name || !role) {
+            alert('Please fill member name and role.')
+            return
+          }
+
+          const payload = { id: id || uid('team'), name, role, email, phone, status }
+
+          if (id) {
+            appData.team = appData.team.map(member => member.id === id ? payload : member)
+          } else {
+            appData.team.push(payload)
+          }
+
+          saveAppData()
+          clearTeamForm()
+          renderAdminPanel()
+          setAdminFeedback(`Team member ${id ? 'updated' : 'added'}: ${payload.name}`)
+        })
+      }
+
+      const clearTeamBtn = document.getElementById('admin-team-clear-btn')
+      if (clearTeamBtn) clearTeamBtn.addEventListener('click', clearTeamForm)
+
+      const stockForm = document.getElementById('admin-stock-form')
+      if (stockForm) {
+        stockForm.addEventListener('submit', event => {
+          event.preventDefault()
+          const id = document.getElementById('admin-stock-id')?.value.trim() || ''
+          const itemName = document.getElementById('admin-stock-item')?.value.trim() || ''
+          const sku = document.getElementById('admin-stock-sku')?.value.trim() || ''
+          const linkedProductId = document.getElementById('admin-stock-link')?.value || ''
+          const quantity = Number(document.getElementById('admin-stock-qty')?.value || 0)
+          const reorderLevel = Number(document.getElementById('admin-stock-reorder')?.value || 0)
+          const unit = document.getElementById('admin-stock-unit')?.value || 'pcs'
+
+          if (!itemName || !sku) {
+            alert('Please fill stock item name and SKU.')
+            return
+          }
+
+          if (Number.isNaN(quantity) || Number.isNaN(reorderLevel) || quantity < 0 || reorderLevel < 0) {
+            alert('Stock quantity and reorder level must be valid positive numbers.')
+            return
+          }
+
+          const payload = {
+            id: id || uid('stock'),
+            itemName,
+            sku,
+            linkedProductId,
+            quantity: Math.floor(quantity),
+            reorderLevel: Math.floor(reorderLevel),
+            unit
+          }
+
+          if (id) {
+            appData.stocks = appData.stocks.map(stock => stock.id === id ? payload : stock)
+          } else {
+            appData.stocks.push(payload)
+          }
+
+          saveAppData()
+          clearStockForm()
+          renderAdminPanel()
+          setAdminFeedback(`Stock ${id ? 'updated' : 'added'}: ${payload.itemName}`)
+        })
+      }
+
+      const clearStockBtn = document.getElementById('admin-stock-clear-btn')
+      if (clearStockBtn) clearStockBtn.addEventListener('click', clearStockForm)
+
+      const securityForm = document.getElementById('admin-security-form')
+      if (securityForm) {
+        securityForm.addEventListener('submit', event => {
+          event.preventDefault()
+          const currentPass = document.getElementById('admin-current-pass')?.value || ''
+          const newPass = document.getElementById('admin-new-pass')?.value || ''
+          const confirmPass = document.getElementById('admin-confirm-pass')?.value || ''
+
+          if (currentPass !== appData.admin.password) {
+            alert('Current password is incorrect.')
+            return
+          }
+
+          if (newPass.length < 6) {
+            alert('New password must be at least 6 characters.')
+            return
+          }
+
+          if (newPass !== confirmPass) {
+            alert('New password and confirmation do not match.')
+            return
+          }
+
+          appData.admin.password = newPass
+          saveAppData()
+          securityForm.reset()
+          setAdminFeedback('Admin password updated successfully.')
+        })
+      }
+
+      const quickRestockBtn = document.getElementById('admin-restock-low-btn')
+      if (quickRestockBtn) {
+        quickRestockBtn.addEventListener('click', () => {
+          let changed = 0
+          appData.stocks = appData.stocks.map(stock => {
+            if (getStockStatus(stock) === 'low') {
+              changed += 1
+              return { ...stock, quantity: stock.quantity + 50 }
+            }
+            return stock
+          })
+          if (!changed) {
+            setAdminFeedback('No low stock items found.')
+            return
+          }
+          saveAppData()
+          renderAdminPanel()
+          setAdminFeedback(`Restocked ${changed} low stock item(s) by +50.`)
+        })
+      }
+
+      const activateTeamBtn = document.getElementById('admin-activate-team-btn')
+      if (activateTeamBtn) {
+        activateTeamBtn.addEventListener('click', () => {
+          if (!appData.team.length) {
+            setAdminFeedback('No team members available.')
+            return
+          }
+          appData.team = appData.team.map(member => ({ ...member, status: 'active' }))
+          saveAppData()
+          renderAdminPanel()
+          setAdminFeedback('All team members set to active.')
+        })
+      }
+
+      const createStockBtn = document.getElementById('admin-create-stock-btn')
+      if (createStockBtn) {
+        createStockBtn.addEventListener('click', () => {
+          const linkedIds = new Set(appData.stocks.map(stock => stock.linkedProductId).filter(Boolean))
+          let created = 0
+          appData.products.forEach(product => {
+            if (linkedIds.has(product.id)) return
+            appData.stocks.push({
+              id: uid('stock'),
+              itemName: `${product.name} Stock`,
+              sku: `FF-${product.id.slice(-6).toUpperCase()}`,
+              linkedProductId: product.id,
+              quantity: 0,
+              reorderLevel: 50,
+              unit: 'pcs'
+            })
+            created += 1
+          })
+          if (!created) {
+            setAdminFeedback('All products already have stock entries.')
+            return
+          }
+          saveAppData()
+          renderAdminPanel()
+          setAdminFeedback(`Created ${created} missing stock entries.`)
+        })
+      }
+
+      const productsBody = document.getElementById('admin-products-body')
+      if (productsBody) {
+        productsBody.addEventListener('click', event => {
+          const button = event.target.closest('button[data-action]')
+          if (!button) return
+          const action = button.dataset.action
+          const id = button.dataset.id
+          const product = findProductById(id)
+          if (!product) return
+
+          if (action === 'edit-product') {
+            document.getElementById('admin-product-id').value = product.id
+            document.getElementById('admin-product-name').value = product.name
+            document.getElementById('admin-product-category').value = product.category
+            document.getElementById('admin-product-material').value = product.material
+            document.getElementById('admin-product-enquiry').value = product.enquiryName
+            document.getElementById('admin-product-image').value = product.image
+            document.getElementById('admin-product-desc').value = product.description
+            document.getElementById('admin-product-specs').value = product.specs.join(', ')
+            document.getElementById('admin-product-save-btn').textContent = 'Update Product'
+            setAdminFeedback(`Editing product: ${product.name}`)
+          }
+
+          if (action === 'delete-product') {
+            if (!confirm(`Delete product "${product.name}"?`)) return
+            appData.products = appData.products.filter(item => item.id !== product.id)
+            appData.stocks = appData.stocks.map(stock => stock.linkedProductId === product.id ? { ...stock, linkedProductId: '' } : stock)
+            saveAppData()
+            clearProductForm()
+            syncViews()
+            setAdminFeedback(`Deleted product: ${product.name}`)
+          }
+        })
+      }
+
+      const teamBody = document.getElementById('admin-team-body')
+      if (teamBody) {
+        teamBody.addEventListener('click', event => {
+          const button = event.target.closest('button[data-action]')
+          if (!button) return
+          const action = button.dataset.action
+          const id = button.dataset.id
+          const member = appData.team.find(item => item.id === id)
+          if (!member) return
+
+          if (action === 'edit-team') {
+            document.getElementById('admin-team-id').value = member.id
+            document.getElementById('admin-team-name').value = member.name
+            document.getElementById('admin-team-role').value = member.role
+            document.getElementById('admin-team-email').value = member.email
+            document.getElementById('admin-team-phone').value = member.phone
+            document.getElementById('admin-team-status').value = member.status
+            document.getElementById('admin-team-save-btn').textContent = 'Update Member'
+            setAdminFeedback(`Editing team member: ${member.name}`)
+          }
+
+          if (action === 'delete-team') {
+            if (!confirm(`Delete team member "${member.name}"?`)) return
+            appData.team = appData.team.filter(item => item.id !== member.id)
+            saveAppData()
+            clearTeamForm()
+            renderAdminPanel()
+            setAdminFeedback(`Deleted team member: ${member.name}`)
+          }
+        })
+      }
+
+      const stockBody = document.getElementById('admin-stock-body')
+      if (stockBody) {
+        stockBody.addEventListener('click', event => {
+          const button = event.target.closest('button[data-action]')
+          if (!button) return
+          const action = button.dataset.action
+          const id = button.dataset.id
+          const stock = appData.stocks.find(item => item.id === id)
+          if (!stock) return
+
+          if (action === 'edit-stock') {
+            document.getElementById('admin-stock-id').value = stock.id
+            document.getElementById('admin-stock-item').value = stock.itemName
+            document.getElementById('admin-stock-sku').value = stock.sku
+            document.getElementById('admin-stock-qty').value = stock.quantity
+            document.getElementById('admin-stock-reorder').value = stock.reorderLevel
+            document.getElementById('admin-stock-unit').value = stock.unit
+            renderStockProductOptions(stock.linkedProductId)
+            document.getElementById('admin-stock-save-btn').textContent = 'Update Stock'
+            setAdminFeedback(`Editing stock: ${stock.itemName}`)
+          }
+
+          if (action === 'delete-stock') {
+            if (!confirm(`Delete stock item "${stock.itemName}"?`)) return
+            appData.stocks = appData.stocks.filter(item => item.id !== stock.id)
+            saveAppData()
+            clearStockForm()
+            renderAdminPanel()
+            setAdminFeedback(`Deleted stock item: ${stock.itemName}`)
+          }
+        })
+      }
+    }
+
+    // Smooth scroll links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', event => {
+        const targetSelector = anchor.getAttribute('href')
+        if (!targetSelector || targetSelector === '#') return
+        let target = null
+        try {
+          target = document.querySelector(targetSelector)
+        } catch {
+          return
+        }
+        if (target) {
+          event.preventDefault()
+          target.scrollIntoView({ behavior: 'smooth' })
+        }
+      })
+    })
+
+    // Dynamic product enquiry prefill delegation
+    document.addEventListener('click', event => {
+      const trigger = event.target.closest('.product-enquire[data-prefill]')
+      if (!trigger) return
+      const productLabel = trigger.dataset.prefill || ''
+      if (productLabel) prefill(productLabel)
+    })
+
+    // Initialize
+    bindAdminEvents()
+    setAdminView()
+    syncViews()
+
+    // Expose functions used by inline handlers
+    window.filterProducts = filterProducts
+    window.prefill = prefill
+    window.handleSubmit = handleSubmit
+  </script>
+</body>
+
+</html>
